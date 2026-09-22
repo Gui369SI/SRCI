@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#fcf2e9", "status-pending": "#D97706", "outline-variant": "#c6c5d2", "status-rejected-bg": "#FEF2F2", "primary-fixed": "#dde1ff", "on-secondary": "#ffffff", "tertiary-container": "#002341", "error-container": "#ffdad6", "surface": "#fff8f4", "surface-container-highest": "#ebe1d8", "stock-critical-bg": "#FFF1F2", "background": "#fff8f4", "secondary-fixed-dim": "#c2c1ff", "surface-tint": "#4c5a9d", "on-primary-fixed-variant": "#334283", "on-secondary-container": "#fffbff", "charcoal-black": "#050505", "on-primary-container": "#7685cb", "status-cancelled-bg": "#F3F4F6", "stock-critical-text": "#991B1B", "inverse-primary": "#b8c3ff", "on-secondary-fixed-variant": "#3226c8", "on-tertiary-fixed-variant": "#00497e", "error": "#ba1a1a", "surface-canvas": "#F7F6F4", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "secondary": "#4a43dd", "tertiary": "#000c1c", "surface-subtle": "#EEE9E4", "status-cancelled": "#6B7280", "surface-variant": "#ebe1d8", "status-approved": "#2563EB", "status-rejected": "#DC2626", "surface-container-high": "#f1e6dd", "secondary-container": "#635ff7", "status-delivered": "#059669", "inverse-surface": "#35302a", "on-primary-fixed": "#001356", "on-tertiary-fixed": "#001d36", "status-approved-bg": "#EFF6FF", "surface-bright": "#fff8f4", "on-primary": "#ffffff", "on-surface": "#1f1b15", "secondary-fixed": "#e2dfff", "on-secondary-fixed": "#0d006a", "on-tertiary-container": "#438dd6", "surface-dim": "#e2d8cf", "status-delivered-bg": "#ECFDF5", "stock-critical-border": "#B91C1C", "primary-container": "#071a5c", "inverse-on-surface": "#f9efe6", "on-background": "#1f1b15", "on-surface-variant": "#454650", "surface-card": "#FFFFFF", "surface-container": "#f6ece3", "status-pending-bg": "#FEF3C7", "outline": "#767681", "on-error-container": "#93000a", "tertiary-fixed-dim": "#9fcaff", "on-tertiary": "#ffffff", "primary-fixed-dim": "#b8c3ff", "primary": "#00062e", "tertiary-fixed": "#d2e4ff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "1rem", "gutter-desktop": "1.5rem", "space-md": "0.75rem", "space-lg": "1.25rem", "margin-desktop": "2rem", "gutter": "1rem", "space-xl": "2rem", "margin-tablet": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-lg": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "code-num": [ "Inter" ], "label-md": [ "Inter" ], "headline-xl": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "body-sm": [ "Inter" ], "body-lg": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "label-sm": [ "Inter" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "16px", { "lineHeight": "22px", "fontWeight": "600" } ], "code-num": [ "14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-xl": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "800" } ] } } } };</script></head><body class="bg-surface-canvas font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-primary-container z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="flex flex-col"><div class="p-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-xl bg-secondary flex items-center justify-center text-on-secondary font-headline-md text-headline-md">S</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary leading-tight">SRCI</span><span class="font-body-sm text-body-sm text-on-primary-fixed-variant font-medium">Controle de Insumos</span></div></div><span class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high/10 text-primary-fixed font-code-num text-label-sm border border-primary-fixed/20">v1.0</span></div><div class="mx-space-md mb-space-md p-space-sm rounded-xl bg-primary/40 border border-outline/20"><div class="flex items-center justify-between mb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-fixed-variant">Perfil Ativo</span><span class="material-symbols-outlined text-[14px] text-on-primary-fixed-variant">verified_user</span></div><div class="font-headline-sm text-[13px] text-on-primary truncate">Almoxarife / Admin TI</div><div class="font-body-sm text-body-sm text-on-tertiary-container flex items-center gap-1 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-status-delivered inline-block"></span>Setor TI Operacional</div></div><nav class="px-space-sm space-y-1 flex flex-col" data-active-classes="bg-secondary text-on-secondary font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-primary-fixed-variant hover:bg-surface-container-highest/10 hover:text-on-primary transition-colors" data-path="dashboard-estoque" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-label-md text-label-md">Dashboard &amp; Estoque</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-primary-fixed-variant hover:bg-surface-container-highest/10 hover:text-on-primary transition-colors" data-path="nova-requisicao" href="#"><span class="material-symbols-outlined text-[20px]">add_shopping_cart</span><span class="font-label-md text-label-md">Nova Requisição</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-primary-fixed-variant hover:bg-surface-container-highest/10 hover:text-on-primary transition-colors" data-path="minhas-requisicoes" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-md text-label-md">Minhas Requisições</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-primary-fixed-variant hover:bg-surface-container-highest/10 hover:text-on-primary transition-colors" data-path="fila-de-aprovacao" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">rule</span><span class="font-label-md text-label-md">Fila de Aprovação</span></div><span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary font-code-num text-label-sm">4</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-primary-fixed-variant hover:bg-surface-container-highest/10 hover:text-on-primary transition-colors" data-path="entradas-de-compras" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-md text-label-md">Entradas de Compras</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-primary-fixed-variant hover:bg-surface-container-highest/10 hover:text-on-primary transition-colors" data-path="auditoria-logs" href="#"><span class="material-symbols-outlined text-[20px]">security</span><span class="font-label-md text-label-md">Auditoria &amp; Logs</span></a></nav></div><div class="p-space-md"><div class="p-space-sm rounded-xl bg-tertiary-container border border-outline/20"><div class="flex items-center justify-between text-on-tertiary-container"><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">SRCI Core Service</span><span class="material-symbols-outlined text-[16px] text-status-delivered">sync_saved_locally</span></div><div class="font-body-sm text-body-sm text-primary-fixed-dim mt-0.5">Cluster Almoxarifado 01</div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card/90 backdrop-blur-xl z-40 border-b border-surface-variant flex items-center justify-between px-space-xl shadow-[0_1px_8px_rgba(7,26,92,0.04)]"><div class="flex items-center w-96"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-outline pointer-events-none">search</span><input class="w-full pl-9 pr-space-md py-1.5 rounded-xl bg-surface-canvas border border-outline-variant font-body-sm text-body-sm text-charcoal-black focus:outline-none focus:border-secondary transition-all" placeholder="Buscar insumo por SKU, descrição ou lote..." type="text"/></div></div><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-xl bg-stock-critical-bg border border-stock-critical-border text-stock-critical-text hover:bg-error-container transition-colors" data-path="dashboard-estoque" href="#"><span class="w-2 h-2 rounded-full bg-status-rejected animate-ping"></span><span class="material-symbols-outlined text-[18px]">warning</span><span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Estoque Crítico (3)</span></a><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-status-pending"></span></button><div class="h-6 w-px bg-outline-variant/60"></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1X_BS27qG-fdemT-DSD28Ite2pQJ_1dOITs8iJjNs1nR3-Ro5lkGuVKWwWph8fLNfN6U5Kw-8hS9lcJQQa2fsNq65m95mhLElsSDvVxOeIBA2Bl_EwsF9-EHRBWXLPP15pBo2zm0Vb2UD9b1IBDJtdE4k_qDpWtNVaiqp3JZBVjwLyItXheOCyXWWwBOZ66aSSA6O4-aivIjlDaWU9DWQC7UMC838syGDesENBvkOrrMpb8weXtVA6qIkouqEuBy1-Dpr-wyP5H"/><div class="flex flex-col text-left"><span class="font-headline-sm text-[13px] text-on-surface leading-snug">Carlos Eduardo</span><span class="font-body-sm text-body-sm text-on-surface-variant">Admin TI</span></div><button class="p-1.5 ml-1 rounded-xl text-status-rejected hover:bg-status-rejected-bg transition-colors" title="Encerrar Sessão"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></header><main class="w-full pt-16 px-space-xl py-space-lg bg-surface-canvas min-h-screen"><div class="flex flex-col w-full gap-space-lg">
+<!-- Header Context & KPI Bento Section -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm mb-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-wider">
+          Módulo de Governança RF-15
+        </span>
+<span class="font-code-num text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-status-delivered inline-block"></span>
+          Conexão Ativa: RPC /avaliar_requisicao
+        </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Fila de Aprovações de Insumos</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Analise demandas departamentais, verifique a integridade do saldo em estoque e despache deliberações com carimbo digital auditável.
+      </p>
+</div>
+<!-- Manager Sector Filter & Quick Actions -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<div class="flex items-center gap-2 bg-surface-container-high px-space-md py-1.5 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">domain</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant leading-none">Setor Sob Gestão</span>
+<select class="bg-transparent font-headline-sm text-headline-sm text-primary focus:outline-none cursor-pointer pr-2">
+<option selected="">TI &amp; Operações Infra (Almoxarifado 01)</option>
+<option>Engenharia de Redes &amp; Datacenter</option>
+<option>Desenvolvimento &amp; Cloud Systems</option>
+<option>Todos os Departamentos (Modo Admin)</option>
+</select>
+</div>
+</div>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-secondary transition-all shadow-md" id="batch-approve-btn" onclick="openBulkNotice()">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Aprovar Selecionados</span>
+</button>
+</div>
+</div>
+<!-- Bento Stats & Audit Immutable Notice -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Stat 1: Pendentes -->
+<div class="md:col-span-3 bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Aguardando Avaliação</span>
+<span class="p-1.5 rounded-lg bg-status-pending-bg text-status-pending">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary">04</span>
+<span class="font-label-md text-label-md text-status-pending">Alta prioridade</span>
+</div>
+<div class="w-full bg-surface-subtle h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-status-pending h-full rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+<!-- Stat 2: Aprovadas Hoje -->
+<div class="md:col-span-3 bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Aprovadas no Mês</span>
+<span class="p-1.5 rounded-lg bg-status-approved-bg text-status-approved">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary">128</span>
+<span class="font-label-md text-label-md text-status-delivered font-code-num">+14% vs jan</span>
+</div>
+<div class="w-full bg-surface-subtle h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-status-approved h-full rounded-full" style="width: 82%;"></div>
+</div>
+</div>
+<!-- Audit Compliance Banner Card (Spans 6 columns) -->
+<div class="md:col-span-6 bg-gradient-to-r from-primary-container via-tertiary-container to-primary-container text-on-primary rounded-xl p-space-md shadow-md flex items-center justify-between relative overflow-hidden">
+<div class="flex items-start gap-space-sm z-10 max-w-xl">
+<div class="p-2 rounded-xl bg-secondary/30 text-primary-fixed mt-0.5">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-primary">Protocolo de Registro Imutável RF-15</span>
+<span class="px-2 py-0.5 rounded-full bg-status-delivered/20 text-status-delivered font-code-num text-label-sm font-semibold">Audit Ready</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-fixed-variant mt-1">
+            Cada decisão gera hash criptográfico atrelando carimbo de data/hora (UTC-3), matrícula do gestor logado (<code class="text-primary-fixed">ADM-0941 Carlos E.</code>) e justificativa formal. Decisões de rejeição notificam compulsoriamente o colaborador requisitante via mensageria interna e e-mail corporativo.
+          </p>
+</div>
+</div>
+<!-- Decorative SVG Chart / Shield Background -->
+<div class="absolute -right-6 -bottom-6 opacity-10 pointer-events-none">
+<svg fill="currentColor" height="180" viewbox="0 0 24 24" width="180">
+<path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Tab Navigation & Quick Filters Toolbar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm bg-surface-card p-2 rounded-xl shadow-sm">
+<div class="flex items-center gap-1 overflow-x-auto">
+<button class="flex items-center gap-2 px-space-md py-2 rounded-xl bg-secondary text-on-secondary font-label-md text-label-md shadow-sm">
+<span>Pendentes de Avaliação</span>
+<span class="px-1.5 py-0.5 rounded-full bg-on-secondary/20 text-on-secondary font-code-num text-label-sm">4</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-subtle hover:text-primary transition-colors font-label-md text-label-md">
+<span>Aprovadas Recentemente</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-code-num text-label-sm">12</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-subtle hover:text-primary transition-colors font-label-md text-label-md">
+<span>Rejeitadas</span>
+<span class="px-1.5 py-0.5 rounded-full bg-status-rejected-bg text-status-rejected font-code-num text-label-sm">3</span>
+</button>
+</div>
+<!-- Right Quick Search within tab -->
+<div class="flex items-center gap-2 pr-1">
+<div class="flex items-center bg-surface-canvas rounded-xl px-2.5 py-1">
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-1 mr-2 uppercase">Filtrar:</span>
+<select class="bg-transparent font-body-sm text-body-sm text-charcoal-black focus:outline-none">
+<option>Todos os tipos de insumo</option>
+<option>Periféricos &amp; Cabos</option>
+<option>Armazenamento &amp; SSDs</option>
+<option>Conectividade / Switches</option>
+</select>
+</div>
+<button class="p-1.5 rounded-xl text-on-surface-variant hover:bg-surface-subtle transition-colors" title="Atualizar fila em tempo real">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- High Density Requisition Approval Table -->
+<div class="bg-surface-card rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-subtle text-primary font-label-sm text-label-sm uppercase tracking-wider h-10">
+<th class="w-10 px-4 text-center">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" id="select-all-box" type="checkbox"/>
+</th>
+<th class="px-3 py-2">ID / Data-Hora</th>
+<th class="px-4 py-2">Colaborador / Solicitante</th>
+<th class="px-4 py-2">Item Solicitado &amp; Saldo</th>
+<th class="px-3 py-2 text-right">Qtd</th>
+<th class="px-4 py-2">Setor Destino</th>
+<th class="px-4 py-2">Justificativa Operacional</th>
+<th class="px-3 py-2 text-center">Status</th>
+<th class="px-4 py-2 text-right">Ações Rápidas</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- ROW 1: REQ-1088 (Targeted for standard approval) -->
+<tr class="hover:bg-surface-canvas/80 transition-colors group" id="row-req-1088">
+<td class="px-4 py-3 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-3 py-3 whitespace-nowrap">
+<span class="font-code-num text-code-num text-primary font-bold block">#REQ-1088</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Hoje, 10:42
+              </span>
+</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Professional corporate headshot of Lucas Ferraz, a Brazilian male systems engineer in his late 20s wearing modern glasses and a dark polo shirt against clean enterprise studio lighting in deep navy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxtJ9VinL5vHibPu9urbObQWXJoTwSST8pSSrxrRx0WMTKsQ7MKCtgtw42cYH6QTCLIF2NjEUR-LnLBOs3DxJDNiTBPl1HzWhCQbyLniF4r1r7iO-0-CazlTqFsoElR7zpQcO1Nnd3KtSh-gKenSESygwqwI8ut9yKA19LmbS2dKlNCe_U0Jg_s74a6IkmRc3ySPwp9VyXoohicrx9cq9MVYoELb6WJNsO986_EuaLOulUkDBNnj5y"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[13px] text-primary font-bold truncate">Lucas Ferraz</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Analista DevOps Pleno</span>
+<span class="font-code-num text-[11px] text-outline truncate">lucas.ferraz@empresa.com.br</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-primary font-bold">Cabo Patch Cord Cat6 2.5m Azul</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] uppercase">Redes &amp; Conectividade</span>
+<span class="font-code-num text-label-sm text-status-delivered font-semibold flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-delivered"></span> Disp: 64 un
+                  </span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 text-right">
+<span class="font-code-num text-headline-sm text-primary font-bold">04</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">unidades</span>
+</td>
+<td class="px-4 py-3 whitespace-nowrap">
+<span class="px-2 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                Datacenter B - Rack 14
+              </span>
+</td>
+<td class="px-4 py-3 max-w-xs">
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-2" title="Manutenção corretiva e interconexão de novo nó de storage SAN no switch redundante.">
+                Manutenção corretiva e interconexão de novo nó de storage SAN no switch redundante.
+              </p>
+</td>
+<td class="px-3 py-3 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-status-pending-bg text-status-pending font-label-sm text-label-sm uppercase font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-pending animate-pulse"></span>
+                Pendente
+              </span>
+</td>
+<td class="px-4 py-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-status-delivered text-on-primary font-label-md text-label-md hover:bg-emerald-700 transition-all shadow-sm" onclick="approveDirect('REQ-1088', 'Lucas Ferraz')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Aprovar</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-status-rejected-bg text-status-rejected font-label-md text-label-md hover:bg-error hover:text-on-error transition-all" onclick="openRejectDrawer('REQ-1088', 'Lucas Ferraz', 'Cabo Patch Cord Cat6 2.5m Azul', '04 unidades')">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>Rejeitar</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2: REQ-1085 (Subject of the Active Demo Modal) -->
+<tr class="bg-status-pending-bg/20 hover:bg-status-pending-bg/40 transition-colors" id="row-req-1085">
+<td class="px-4 py-3 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-3 py-3 whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="font-code-num text-code-num text-primary font-bold">#REQ-1085</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary/15 text-secondary font-code-num text-[10px] font-bold">EM FOCO</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Hoje, 09:15
+              </span>
+</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Corporate headshot of Maria Souza, a Hispanic female IT project coordinator in her 30s with hair pulled back, wearing a navy blazer in an illuminated corporate office setting with subtle architectural blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB44AqEBVvmw6ZVbKxJ87uzBV9BSOPnCfUn2igIgAD_swALP2IqrLWkT0BvbnZHxs42PylEXKBq18dKXH0_dguqZ39ZiyuHxKY8ATiSqtsydw-b3dhKmwFpZr6aN-ylUOmx185C3o7HPGg89BqF-honVcQCtXPk9itgL0H-nKVIBbc5IZidZyYCdOsShtSZ09LPwPl2mJPRDE3aUIo6rF01A8JjX5bAZGn5rsgtsGZ3TRKCnSBeK5kb"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[13px] text-primary font-bold truncate">Maria Souza</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Coordenadora PMO TI</span>
+<span class="font-code-num text-[11px] text-outline truncate">maria.souza@empresa.com.br</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-primary font-bold">SSD NVMe M.2 1TB PCIe 4.0</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] uppercase">Hardware / Storage</span>
+<!-- Critical stock indicator -->
+<span class="font-code-num text-label-sm text-stock-critical-text font-bold bg-stock-critical-bg px-1.5 py-0.5 rounded flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-rejected animate-ping"></span> Disp: 02 un (Crítico)
+                  </span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 text-right">
+<span class="font-code-num text-headline-sm text-status-rejected font-bold">02</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">unidades</span>
+</td>
+<td class="px-4 py-3 whitespace-nowrap">
+<span class="px-2 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                Gestão de Projetos / PMO
+              </span>
+</td>
+<td class="px-4 py-3 max-w-xs">
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-2" title="Substituição emergencial de unidade danificada na workstation de renderização de arquitetura 3D.">
+                Substituição emergencial de unidade danificada na workstation de renderização 3D.
+              </p>
+</td>
+<td class="px-3 py-3 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-status-pending-bg text-status-pending font-label-sm text-label-sm uppercase font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-pending animate-pulse"></span>
+                Pendente
+              </span>
+</td>
+<td class="px-4 py-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-status-delivered text-on-primary font-label-md text-label-md hover:bg-emerald-700 transition-all shadow-sm" onclick="approveDirect('REQ-1085', 'Maria Souza')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Aprovar</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-status-rejected text-on-primary font-label-md text-label-md hover:bg-red-700 transition-all shadow-sm" onclick="openRejectDrawer('REQ-1085', 'Maria Souza', 'SSD NVMe M.2 1TB PCIe 4.0', '02 unidades')">
+<span class="material-symbols-outlined text-[16px]">rule_folder</span>
+<span>Rejeitar</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 3: REQ-1082 -->
+<tr class="hover:bg-surface-canvas/80 transition-colors group" id="row-req-1082">
+<td class="px-4 py-3 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-3 py-3 whitespace-nowrap">
+<span class="font-code-num text-code-num text-primary font-bold block">#REQ-1082</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Ontem, 17:40
+              </span>
+</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Portrait of Rafael Mendes, male senior IT security specialist with trimmed beard, wearing a charcoal casual shirt with soft natural office lighting and technological monitors blurred behind him" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwi6OMYX4Ovu3Yw9RnoyfyoE1G8ZqWcALOPnFQiX3G8SPTuKefJd_KnPOtpdTj-yuCuyaMf1jp79QaO4CYwl1eltBXwnJ3ESrnFvHbcVVDd2RPsoVrILv25rYq8prXBdPEwPR4e70ZIU6qN3IAPqIbdUVJWYnrhY8U5JZd_6fNN9RASJAId4FqAi_6RDGE4mcG57fXQZ_VFKsXbwZTNnltAoKZbSHo7tWpdnndcxsTLmrdMshz6PQp"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[13px] text-primary font-bold truncate">Rafael Mendes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Especialista SecOps</span>
+<span class="font-code-num text-[11px] text-outline truncate">rafael.mendes@empresa.com.br</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-primary font-bold">Token de Autenticação FIDO2 USB-C</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] uppercase">Segurança Cibernética</span>
+<span class="font-code-num text-label-sm text-status-delivered font-semibold flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-delivered"></span> Disp: 18 un
+                  </span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 text-right">
+<span class="font-code-num text-headline-sm text-primary font-bold">01</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">unidade</span>
+</td>
+<td class="px-4 py-3 whitespace-nowrap">
+<span class="px-2 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                CyberSOC &amp; Defesa
+              </span>
+</td>
+<td class="px-4 py-3 max-w-xs">
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-2" title="Provisionamento de chave física de acesso root para novo operador do cluster Kubernetes de produção.">
+                Provisionamento de chave física de acesso root para novo operador do cluster Kubernetes.
+              </p>
+</td>
+<td class="px-3 py-3 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-status-pending-bg text-status-pending font-label-sm text-label-sm uppercase font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-pending animate-pulse"></span>
+                Pendente
+              </span>
+</td>
+<td class="px-4 py-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-status-delivered text-on-primary font-label-md text-label-md hover:bg-emerald-700 transition-all shadow-sm" onclick="approveDirect('REQ-1082', 'Rafael Mendes')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Aprovar</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-status-rejected-bg text-status-rejected font-label-md text-label-md hover:bg-error hover:text-on-error transition-all" onclick="openRejectDrawer('REQ-1082', 'Rafael Mendes', 'Token FIDO2 USB-C', '01 unidade')">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>Rejeitar</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 4: REQ-1080 -->
+<tr class="hover:bg-surface-canvas/80 transition-colors group" id="row-req-1080">
+<td class="px-4 py-3 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-3 py-3 whitespace-nowrap">
+<span class="font-code-num text-code-num text-primary font-bold block">#REQ-1080</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Ontem, 15:10
+              </span>
+</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Headshot of Juliana Duarte, a Brazilian female technical support lead in her early 30s with curly hair, wearing modern glasses and headphones resting around neck, clean corporate lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWTaYXojGN12nl_7UmirI_cHMl8kcx1QA2eNfT_96yYgg36P-6mu80iF8bJU0LIfvyhhimdH0TEJdt1oePFPK5GnrzTTmEE0kJOALDBfxztHKHMxT8BHYeFZOZLYXGvPj5P2btlQcldCsCq_d2TrMLo8tGRboAnBbScsaw97In525uxidlQq4v7sHsOxMpX3iB-oZRvQjoHYfFNvIZwOVYppMks13ULaVZTIwcmh4DtMsdYH5PrL9-"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[13px] text-primary font-bold truncate">Juliana Duarte</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Líder de Suporte N2</span>
+<span class="font-code-num text-[11px] text-outline truncate">juliana.duarte@empresa.com.br</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-primary font-bold">Kit Teclado &amp; Mouse Dell Pro Sem Fio</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] uppercase">Periféricos &amp; Acessórios</span>
+<span class="font-code-num text-label-sm text-status-delivered font-semibold flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-delivered"></span> Disp: 41 kits
+                  </span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 text-right">
+<span class="font-code-num text-headline-sm text-primary font-bold">03</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">kits</span>
+</td>
+<td class="px-4 py-3 whitespace-nowrap">
+<span class="px-2 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                Central Service Desk
+              </span>
+</td>
+<td class="px-4 py-3 max-w-xs">
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-2" title="Ativação de 3 novas posições de atendimento para nova equipe de suporte ao cliente N1.">
+                Ativação de 3 novas posições de atendimento presencial para a equipe de Helpdesk N1.
+              </p>
+</td>
+<td class="px-3 py-3 text-center whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-status-pending-bg text-status-pending font-label-sm text-label-sm uppercase font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-pending animate-pulse"></span>
+                Pendente
+              </span>
+</td>
+<td class="px-4 py-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-status-delivered text-on-primary font-label-md text-label-md hover:bg-emerald-700 transition-all shadow-sm" onclick="approveDirect('REQ-1080', 'Juliana Duarte')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Aprovar</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-status-rejected-bg text-status-rejected font-label-md text-label-md hover:bg-error hover:text-on-error transition-all" onclick="openRejectDrawer('REQ-1080', 'Juliana Duarte', 'Kit Teclado &amp; Mouse Dell Pro Sem Fio', '03 kits')">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>Rejeitar</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Density Footer & Pagination Summary -->
+<div class="bg-surface-subtle/50 px-space-lg py-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="font-code-num">Exibindo 4 requisições prioritárias sob sua alçada de aprovação</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>Tempo médio de deliberação: <strong>1.4h</strong></span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase text-outline">Linhas por pág:</span>
+<span class="font-code-num text-primary font-bold bg-surface-card px-2 py-0.5 rounded shadow-xs">10</span>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-outline/50 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="font-code-num text-primary font-bold">1 de 1</span>
+<button class="p-1 rounded text-outline/50 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Rejection Drawer / Modal Overlay (Pre-opened for Demonstração RF-15 / RPC avaliar_requisicao) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-primary-container/60 backdrop-blur-sm transition-opacity duration-200" id="reject-modal">
+<div class="bg-surface-card rounded-xl max-w-2xl w-full shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150 flex flex-col">
+<!-- Modal Header -->
+<div class="bg-status-rejected-bg px-space-lg py-space-md flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-status-rejected text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">assignment_late</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-stock-critical-text" id="modal-title">Rejeitar Requisição #REQ-1085</h2>
+<span class="px-2 py-0.5 rounded bg-status-rejected/15 text-status-rejected font-code-num text-label-sm font-bold">RF-15 Mandatório</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="modal-subtitle">Solicitante: Maria Souza (Coordenadora PMO TI)</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-status-rejected p-1.5 rounded-xl hover:bg-surface-container transition-colors" onclick="closeRejectDrawer()" title="Fechar">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Item Snapshot in Modal -->
+<div class="bg-surface-canvas px-space-lg py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-secondary">memory</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[13px] text-primary font-bold" id="modal-item-name">SSD NVMe M.2 1TB PCIe 4.0</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="modal-item-qty">Quantidade pleiteada: 02 unidades</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase text-stock-critical-text font-bold bg-stock-critical-bg px-2 py-0.5 rounded">Saldo Atual: 02 un</span>
+</div>
+</div>
+<!-- Form Body -->
+<div class="p-space-lg flex flex-col gap-space-md">
+<!-- Template Selector -->
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1.5">
+            Motivos Pré-definidos de Governança
+            <span class="font-normal text-on-surface-variant">(Selecione para preenchimento rápido conforme POP-SRCI-04)</span>
+</label>
+<div class="grid grid-cols-1 gap-2">
+<button class="text-left px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface hover:text-primary font-body-sm text-body-sm transition-colors flex items-center justify-between group" onclick="applyPresetReason('Estoque reservado para projeto prioritário homologado pela Diretoria de Tecnologia.')" type="button">
+<span>• Estoque reservado para projeto prioritário</span>
+<span class="material-symbols-outlined text-[16px] text-secondary opacity-0 group-hover:opacity-100 transition-opacity">north_west</span>
+</button>
+<button class="text-left px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface hover:text-primary font-body-sm text-body-sm transition-colors flex items-center justify-between group" onclick="applyPresetReason('Colaborador já possui cota mensal de periféricos/hardware atendida no período vigente.')" type="button">
+<span>• Colaborador já possui cota atendida no mês</span>
+<span class="material-symbols-outlined text-[16px] text-secondary opacity-0 group-hover:opacity-100 transition-opacity">north_west</span>
+</button>
+<button class="text-left px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface hover:text-primary font-body-sm text-body-sm transition-colors flex items-center justify-between group" onclick="applyPresetReason('Insumo indisponível no padrão solicitado; item substituído pelo similar com código de patrimônio #INS-4491.')" type="button">
+<span>• Insumo substituído por similar</span>
+<span class="material-symbols-outlined text-[16px] text-secondary opacity-0 group-hover:opacity-100 transition-opacity">north_west</span>
+</button>
+</div>
+</div>
+<!-- Mandatory Textarea -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<label class="font-label-md text-label-md text-primary flex items-center gap-1" for="rejection-reason">
+<span>Motivo formal da rejeição</span>
+<span class="text-status-rejected font-bold">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline" id="char-counter">92/500 caracteres</span>
+</div>
+<div class="relative">
+<textarea class="w-full p-3 rounded-xl bg-surface-canvas text-charcoal-black font-body-md text-body-md focus:outline-none focus:bg-surface-card focus:shadow-[0_0_0_2px_#3327c9] transition-all resize-none leading-relaxed" id="rejection-reason" placeholder="Descreva com detalhes o parecer técnico ou orçamentário. Esta mensagem será enviada integralmente para o e-mail funcional da solicitante..." required="" rows="3">Estoque reservado para projeto prioritário homologado pela Diretoria de Tecnologia.</textarea>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-status-pending">forward_to_inbox</span>
+            A colaboradora <strong class="text-primary font-bold">maria.souza@empresa.com.br</strong> receberá aviso formal com direito a reabertura via chamado de exceção.
+          </p>
+</div>
+<!-- Dispatch Authentication Stamp -->
+<div class="bg-surface-subtle p-3 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">fingerprint</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Chave de Assinatura do Gestor</span>
+<span class="font-code-num text-body-sm text-primary font-bold">0x8F41A...B88 (Carlos Eduardo - Admin TI)</span>
+</div>
+</div>
+<span class="font-code-num text-label-sm text-outline">Timestamp: Automático</span>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="bg-surface-subtle/70 px-space-lg py-space-sm flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-xl bg-surface-card text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors" onclick="closeRejectDrawer()" type="button">
+          Cancelar
+        </button>
+<button class="flex items-center gap-2 px-space-lg py-2 rounded-xl bg-status-rejected text-on-primary font-headline-sm text-headline-sm hover:bg-red-700 transition-all shadow-md" id="confirm-reject-btn" onclick="submitRejection()" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Confirmar Rejeição &amp; Notificar</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Container for Instant Micro-interactions -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 p-space-md rounded-xl bg-primary text-on-primary shadow-xl" id="toast-notification">
+<div class="p-1 rounded-lg bg-status-delivered text-on-primary" id="toast-icon-wrapper">
+<span class="material-symbols-outlined text-[20px]" id="toast-icon">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[13px]" id="toast-title">Ação realizada com sucesso</span>
+<span class="font-body-sm text-body-sm text-on-primary-fixed-variant" id="toast-desc">O status foi atualizado de forma auditada no ledger.</span>
+</div>
+</div>
+</div>
+<script>
+  let activeTargetReq = 'REQ-1085';
+
+  function openRejectDrawer(reqId, requesterName, itemName, itemQty) {
+    activeTargetReq = reqId;
+    document.getElementById('modal-title').textContent = 'Rejeitar Requisição #' + reqId;
+    document.getElementById('modal-subtitle').textContent = 'Solicitante: ' + requesterName;
+    if (itemName) document.getElementById('modal-item-name').textContent = itemName;
+    if (itemQty) document.getElementById('modal-item-qty').textContent = 'Quantidade pleiteada: ' + itemQty;
+    
+    const modal = document.getElementById('reject-modal');
+    modal.classList.remove('hidden');
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    document.getElementById('rejection-reason').focus();
+  }
+
+  function closeRejectDrawer() {
+    const modal = document.getElementById('reject-modal');
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    setTimeout(() => {
+      modal.classList.add('hidden');
+    }, 200);
+  }
+
+  function applyPresetReason(reasonText) {
+    const textarea = document.getElementById('rejection-reason');
+    textarea.value = reasonText;
+    updateCounter();
+    textarea.focus();
+  }
+
+  function updateCounter() {
+    const textarea = document.getElementById('rejection-reason');
+    const counter = document.getElementById('char-counter');
+    if (textarea && counter) {
+      counter.textContent = textarea.value.length + '/500 caracteres';
+    }
+  }
+
+  const reasonInput = document.getElementById('rejection-reason');
+  if (reasonInput) {
+    reasonInput.addEventListener('input', updateCounter);
+    updateCounter();
+  }
+
+  function submitRejection() {
+    const reason = document.getElementById('rejection-reason').value.trim();
+    if (!reason) {
+      alert('Por favor, informe a justificativa formal de rejeição.');
+      document.getElementById('rejection-reason').focus();
+      return;
+    }
+
+    const row = document.getElementById('row-' + activeTargetReq.toLowerCase());
+    if (row) {
+      row.classList.add('opacity-40', 'transition-all');
+      setTimeout(() => {
+        row.remove();
+      }, 350);
+    }
+
+    closeRejectDrawer();
+    triggerToast('Requisição #' + activeTargetReq + ' Rejeitada', 'Notificação enviada ao colaborador com carimbo RF-15.', 'error');
+  }
+
+  function approveDirect(reqId, requesterName) {
+    const row = document.getElementById('row-' + reqId.toLowerCase());
+    if (row) {
+      row.classList.add('bg-status-delivered-bg', 'transition-all');
+      setTimeout(() => {
+        row.classList.add('opacity-30');
+        setTimeout(() => row.remove(), 250);
+      }, 400);
+    }
+    triggerToast('Requisição #' + reqId + ' Aprovada!', 'Reserva de insumo efetivada e comunicada ao almoxarifado.', 'success');
+  }
+
+  function openBulkNotice() {
+    const checkedBoxes = document.querySelectorAll('.row-checkbox:checked');
+    if (checkedBoxes.length === 0) {
+      triggerToast('Nenhuma requisição marcada', 'Selecione uma ou mais caixas na tabela para aprovação em lote.', 'warning');
+      return;
+    }
+    triggerToast(checkedBoxes.length + ' Requisições Aprovadas em Lote', 'Assinatura digital corporativa gerada para todos os itens.', 'success');
+    checkedBoxes.forEach(cb => {
+      const row = cb.closest('tr');
+      if (row) row.remove();
+    });
+  }
+
+  function triggerToast(title, desc, type) {
+    const toast = document.getElementById('toast-notification');
+    const toastTitle = document.getElementById('toast-title');
+    const toastDesc = document.getElementById('toast-desc');
+    const toastIconWrapper = document.getElementById('toast-icon-wrapper');
+    const toastIcon = document.getElementById('toast-icon');
+
+    toastTitle.textContent = title;
+    toastDesc.textContent = desc;
+
+    if (type === 'error') {
+      toastIconWrapper.className = 'p-1 rounded-lg bg-status-rejected text-on-primary';
+      toastIcon.textContent = 'block';
+    } else if (type === 'warning') {
+      toastIconWrapper.className = 'p-1 rounded-lg bg-status-pending text-on-primary';
+      toastIcon.textContent = 'warning';
+    } else {
+      toastIconWrapper.className = 'p-1 rounded-lg bg-status-delivered text-on-primary';
+      toastIcon.textContent = 'verified';
+    }
+
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.add('translate-y-20', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3800);
+  }
+
+  // Select all checkbox handler
+  const selectAll = document.getElementById('select-all-box');
+  if (selectAll) {
+    selectAll.addEventListener('change', function() {
+      const rowBoxes = document.querySelectorAll('.row-checkbox');
+      rowBoxes.forEach(box => box.checked = selectAll.checked);
+    });
+  }
+</script></main></div></body></html>

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#fcf2e9", "status-pending": "#D97706", "outline-variant": "#c6c5d2", "status-rejected-bg": "#FEF2F2", "primary-fixed": "#dde1ff", "on-secondary": "#ffffff", "tertiary-container": "#002341", "error-container": "#ffdad6", "surface": "#fff8f4", "surface-container-highest": "#ebe1d8", "stock-critical-bg": "#FFF1F2", "background": "#fff8f4", "secondary-fixed-dim": "#c2c1ff", "surface-tint": "#4c5a9d", "on-primary-fixed-variant": "#334283", "on-secondary-container": "#fffbff", "charcoal-black": "#050505", "on-primary-container": "#7685cb", "status-cancelled-bg": "#F3F4F6", "stock-critical-text": "#991B1B", "inverse-primary": "#b8c3ff", "on-secondary-fixed-variant": "#3226c8", "on-tertiary-fixed-variant": "#00497e", "error": "#ba1a1a", "surface-canvas": "#F7F6F4", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "secondary": "#4a43dd", "tertiary": "#000c1c", "surface-subtle": "#EEE9E4", "status-cancelled": "#6B7280", "surface-variant": "#ebe1d8", "status-approved": "#2563EB", "status-rejected": "#DC2626", "surface-container-high": "#f1e6dd", "secondary-container": "#635ff7", "status-delivered": "#059669", "inverse-surface": "#35302a", "on-primary-fixed": "#001356", "on-tertiary-fixed": "#001d36", "status-approved-bg": "#EFF6FF", "surface-bright": "#fff8f4", "on-primary": "#ffffff", "on-surface": "#1f1b15", "secondary-fixed": "#e2dfff", "on-secondary-fixed": "#0d006a", "on-tertiary-container": "#438dd6", "surface-dim": "#e2d8cf", "status-delivered-bg": "#ECFDF5", "stock-critical-border": "#B91C1C", "primary-container": "#071a5c", "inverse-on-surface": "#f9efe6", "on-background": "#1f1b15", "on-surface-variant": "#454650", "surface-card": "#FFFFFF", "surface-container": "#f6ece3", "status-pending-bg": "#FEF3C7", "outline": "#767681", "on-error-container": "#93000a", "tertiary-fixed-dim": "#9fcaff", "on-tertiary": "#ffffff", "primary-fixed-dim": "#b8c3ff", "primary": "#00062e", "tertiary-fixed": "#d2e4ff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "1rem", "gutter-desktop": "1.5rem", "space-md": "0.75rem", "space-lg": "1.25rem", "margin-desktop": "2rem", "gutter": "1rem", "space-xl": "2rem", "margin-tablet": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-lg": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "code-num": [ "Inter" ], "label-md": [ "Inter" ], "headline-xl": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "body-sm": [ "Inter" ], "body-lg": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "label-sm": [ "Inter" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "16px", { "lineHeight": "22px", "fontWeight": "600" } ], "code-num": [ "14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-xl": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "800" } ] } } } };</script></head><body class="bg-surface-canvas font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-primary-container z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="flex flex-col"><div class="p-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-xl bg-secondary flex items-center justify-center text-on-secondary font-headline-md text-headline-md">S</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary leading-tight">SRCI</span><span class="font-body-sm text-body-sm text-on-primary-fixed-variant font-medium">Controle de Insumos</span></div></div><span class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high/10 text-primary-fixed font-code-num text-label-sm border border-primary-fixed/20">v1.0</span></div><div class="mx-space-md mb-space-md p-space-sm rounded-xl bg-primary/40 border border-outline/20"><div class="flex items-center justify-between mb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-fixed-variant">Perfil Ativo</span><span class="material-symbols-outlined text-[14px] text-on-primary-fixed-variant">verified_user</span></div><div class="font-headline-sm text-[13px] text-on-primary truncate">Almoxarife / Admin TI</div><div class="font-body-sm text-body-sm text-on-tertiary-container flex items-center gap-1 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-status-delivered inline-block"></span>Setor TI Operacional</div></div><nav class="px-space-sm space-y-1 flex flex-col" data-active-classes="bg-secondary text-on-secondary font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-primary-fixed-variant hover:bg-surface-container-highest/10 hover:text-on-primary transition-colors" data-path="dashboard-estoque" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-label-md text-label-md">Dashboard &amp; Estoque</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-primary-fixed-variant hover:bg-surface-container-highest/10 hover:text-on-primary transition-colors" data-path="nova-requisicao" href="#"><span class="material-symbols-outlined text-[20px]">add_shopping_cart</span><span class="font-label-md text-label-md">Nova Requisição</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-primary-fixed-variant hover:bg-surface-container-highest/10 hover:text-on-primary transition-colors" data-path="minhas-requisicoes" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-md text-label-md">Minhas Requisições</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-primary-fixed-variant hover:bg-surface-container-highest/10 hover:text-on-primary transition-colors" data-path="fila-de-aprovacao" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">rule</span><span class="font-label-md text-label-md">Fila de Aprovação</span></div><span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary font-code-num text-label-sm">4</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-primary-fixed-variant hover:bg-surface-container-highest/10 hover:text-on-primary transition-colors" data-path="entradas-de-compras" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-md text-label-md">Entradas de Compras</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-primary-fixed-variant hover:bg-surface-container-highest/10 hover:text-on-primary transition-colors" data-path="auditoria-logs" href="#"><span class="material-symbols-outlined text-[20px]">security</span><span class="font-label-md text-label-md">Auditoria &amp; Logs</span></a></nav></div><div class="p-space-md"><div class="p-space-sm rounded-xl bg-tertiary-container border border-outline/20"><div class="flex items-center justify-between text-on-tertiary-container"><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">SRCI Core Service</span><span class="material-symbols-outlined text-[16px] text-status-delivered">sync_saved_locally</span></div><div class="font-body-sm text-body-sm text-primary-fixed-dim mt-0.5">Cluster Almoxarifado 01</div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card/90 backdrop-blur-xl z-40 border-b border-surface-variant flex items-center justify-between px-space-xl shadow-[0_1px_8px_rgba(7,26,92,0.04)]"><div class="flex items-center w-96"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-outline pointer-events-none">search</span><input class="w-full pl-9 pr-space-md py-1.5 rounded-xl bg-surface-canvas border border-outline-variant font-body-sm text-body-sm text-charcoal-black focus:outline-none focus:border-secondary transition-all" placeholder="Buscar insumo por SKU, descrição ou lote..." type="text"/></div></div><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-xl bg-stock-critical-bg border border-stock-critical-border text-stock-critical-text hover:bg-error-container transition-colors" data-path="dashboard-estoque" href="#"><span class="w-2 h-2 rounded-full bg-status-rejected animate-ping"></span><span class="material-symbols-outlined text-[18px]">warning</span><span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Estoque Crítico (3)</span></a><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-status-pending"></span></button><div class="h-6 w-px bg-outline-variant/60"></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1X_BS27qG-fdemT-DSD28Ite2pQJ_1dOITs8iJjNs1nR3-Ro5lkGuVKWwWph8fLNfN6U5Kw-8hS9lcJQQa2fsNq65m95mhLElsSDvVxOeIBA2Bl_EwsF9-EHRBWXLPP15pBo2zm0Vb2UD9b1IBDJtdE4k_qDpWtNVaiqp3JZBVjwLyItXheOCyXWWwBOZ66aSSA6O4-aivIjlDaWU9DWQC7UMC838syGDesENBvkOrrMpb8weXtVA6qIkouqEuBy1-Dpr-wyP5H"/><div class="flex flex-col text-left"><span class="font-headline-sm text-[13px] text-on-surface leading-snug">Carlos Eduardo</span><span class="font-body-sm text-body-sm text-on-surface-variant">Admin TI</span></div><button class="p-1.5 ml-1 rounded-xl text-status-rejected hover:bg-status-rejected-bg transition-colors" title="Encerrar Sessão"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></header><main class="w-full pt-16 px-space-xl py-space-lg bg-surface-canvas min-h-screen"><div class="flex flex-col w-full gap-space-lg">
+<!-- Sub-Header / Welcome Context Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-card p-space-lg shadow-sm">
+<div class="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-secondary/5 blur-3xl pointer-events-none"></div>
+<div class="relative flex flex-col md:flex-row md:items-center justify-between gap-space-md z-10">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-surface-subtle font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">SRCI v1.0 • Almoxarifado Central TI</span>
+<span class="inline-flex items-center gap-1 font-code-num text-body-sm text-status-delivered">
+<span class="h-1.5 w-1.5 rounded-full bg-status-delivered animate-pulse"></span>
+            Sincronizado
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary mt-1">Painel Geral de Estoque</h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Operador: <strong class="font-headline-sm text-headline-sm text-on-surface">Carlos Silva</strong> (Almoxarife TI)</span>
+<span>•</span>
+<span class="font-code-num text-body-sm" id="live-date">Terça-feira, 24 de Outubro de 2024</span>
+</p>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm">
+<a class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-subtle hover:bg-surface-container text-primary font-headline-sm text-body-md transition-all shadow-sm" data-path="entradas-de-compras" href="#">
+<span class="material-symbols-outlined text-[18px]">add_box</span>
+<span>+ Entrada de Compra</span>
+</a>
+<a class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary hover:bg-secondary text-on-primary font-headline-sm text-body-md transition-all shadow-md" data-path="nova-requisicao" href="#">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>+ Nova Requisição</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 4 Primary KPI Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1: Itens Ativos -->
+<div class="rounded-xl bg-surface-card p-space-md shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Catálogo Ativo</span>
+<span class="font-headline-xl text-headline-xl text-primary font-bold mt-1">09</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-subtle text-primary">
+<span class="material-symbols-outlined text-[22px]">category</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">100% dos SKUs auditados</span>
+<span class="font-label-sm text-label-sm text-status-delivered font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+          Ativos
+        </span>
+</div>
+</div>
+<!-- KPI 2: Alerta Crítico (High Contrast Alert) -->
+<div class="rounded-xl bg-stock-critical-bg p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between relative z-10">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-stock-critical-text font-bold flex items-center gap-1.5">
+<span class="h-2 w-2 rounded-full bg-status-rejected animate-ping"></span>
+            Estoque Crítico
+          </span>
+<span class="font-headline-xl text-headline-xl text-stock-critical-text font-bold mt-1">03</span>
+</div>
+<div class="p-2.5 rounded-xl bg-status-rejected/10 text-status-rejected">
+<span class="material-symbols-outlined text-[22px]">crisis_alert</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between relative z-10">
+<span class="font-body-sm text-body-sm text-stock-critical-text font-medium">Abaixo do estoque mín.</span>
+<span class="px-1.5 py-0.5 rounded-full bg-status-rejected text-on-error font-label-sm text-label-sm uppercase tracking-wide font-bold">Repor</span>
+</div>
+</div>
+<!-- KPI 3: Requisições Pendentes -->
+<div class="rounded-xl bg-surface-card p-space-md shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Requisições Pendentes</span>
+<span class="font-headline-xl text-headline-xl text-status-pending font-bold mt-1">05</span>
+</div>
+<div class="p-2.5 rounded-xl bg-status-pending-bg text-status-pending">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">3 aprovação • 2 entrega</span>
+<a class="font-label-sm text-label-sm text-secondary hover:underline font-semibold flex items-center" data-path="fila-de-aprovacao" href="#">
+          Fila
+          <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- KPI 4: Movimentações do Mês -->
+<div class="rounded-xl bg-surface-card p-space-md shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Movimentações / Mês</span>
+<span class="font-headline-xl text-headline-xl text-primary font-bold mt-1">48</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-subtle text-primary">
+<span class="material-symbols-outlined text-[22px]">swap_vert</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">32 saídas • 16 entradas</span>
+<span class="font-code-num text-label-sm text-status-delivered font-semibold">+12% mês</span>
+</div>
+</div>
+</div>
+<!-- Attention Section: Alerta de Reposição Imediata -->
+<div class="rounded-xl bg-surface-card p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="h-9 w-9 rounded-xl bg-stock-critical-bg text-stock-critical-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">warning</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Alerta de Reposição Imediata (Itens ≤ Estoque Mínimo)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Itens com risco de ruptura no atendimento departamental. Acione reposição com 1 clique.</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-stock-critical-bg text-stock-critical-text font-label-sm text-label-sm font-bold uppercase tracking-wider self-start sm:self-auto">3 Itens em Perigo</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<!-- Critical Card 1: Toner HP 85A -->
+<div class="rounded-xl bg-surface-canvas p-space-md flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex items-start gap-space-sm">
+<img class="w-14 h-14 rounded-lg object-cover flex-shrink-0" data-alt="High precision black laser toner cartridge in industrial packaging on neutral clean workbench with warehouse soft background lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEM25UZ5PI45442VqkNQ11Caqtm8YIINezHZxjC5PiVgFFDUEZYGtChC107sHZ5X8SoRraonGB0mM6V4v5FQyCE2YDx5rO2jSwNTqSYemi-lPWqQd_ieqBBVdMX2sBLCI4FjAWWuHo817ou0aX0DBTwh5TI2SGaOpGyA3A9OM45sBXRNUu3GsCKG7H576qAxQheohY1XIwcHsyUtCNZsbv-MqVDrTaZeQfn1TNekWoMNe-hTdIc9_O"/>
+<div class="min-w-0 flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">SKU-TON-85A</span>
+<h3 class="font-headline-sm text-headline-sm text-primary truncate" title="Toner HP LaserJet CE285A 85A">Toner HP 85A Preto</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cartucho</p>
+</div>
+</div>
+<div class="my-space-md p-space-sm rounded-lg bg-stock-critical-bg">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-stock-critical-text uppercase font-bold">Saldo: 01 un</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mínimo: 02 un</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-card overflow-hidden">
+<div class="h-full bg-status-rejected w-[50%] transition-all"></div>
+</div>
+<span class="font-body-sm text-body-sm text-stock-critical-text block mt-1.5 font-medium">Déficit: -1 cartucho</span>
+</div>
+<button class="w-full py-2 px-space-sm rounded-lg bg-stock-critical-text hover:bg-status-rejected text-on-primary font-headline-sm text-label-md flex items-center justify-center gap-1.5 transition-colors shadow-sm" onclick="triggerReplenish('Toner HP 85A', 'SKU-TON-85A')">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>Solicitar Compra / Entrada</span>
+</button>
+</div>
+<!-- Critical Card 2: Papel A4 75g -->
+<div class="rounded-xl bg-surface-canvas p-space-md flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex items-start gap-space-sm">
+<img class="w-14 h-14 rounded-lg object-cover flex-shrink-0" data-alt="Neat stacked reams of white A4 printing paper packaged in deep blue branded moisture-proof wrapping inside modern office warehouse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZNva8roiz0s1nMIK7hyR-k8WfcKqyPB_ZN1Yu3UkvyCmsO9ziQHssVgRh3Q3XOKj1k_iXvyW0O-DAGpXBl5tihnUuTePdVng3vxpB9xCGMNIV-aYk6faxsdOKZp0otjPQADGcsrg4zSEVVC7XmBPkW5TBqh65eqYE0nYQNeKgctpUnxaQ8OosScU7xzpbxhOnTSbDR05dbCpkMGzXcuqAzXUxteVSXPB7erbEHw86if3JONkKSWdj"/>
+<div class="min-w-0 flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">SKU-PAP-A475</span>
+<h3 class="font-headline-sm text-headline-sm text-primary truncate" title="Resma Papel A4 Chamex 75g">Resma Papel A4 75g</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Resma (500 folhas)</p>
+</div>
+</div>
+<div class="my-space-md p-space-sm rounded-lg bg-stock-critical-bg">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-stock-critical-text uppercase font-bold">Saldo: 14 resmas</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mínimo: 20 resmas</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-card overflow-hidden">
+<div class="h-full bg-status-rejected w-[70%] transition-all"></div>
+</div>
+<span class="font-body-sm text-body-sm text-stock-critical-text block mt-1.5 font-medium">Déficit: -6 resmas</span>
+</div>
+<button class="w-full py-2 px-space-sm rounded-lg bg-stock-critical-text hover:bg-status-rejected text-on-primary font-headline-sm text-label-md flex items-center justify-center gap-1.5 transition-colors shadow-sm" onclick="triggerReplenish('Resma Papel A4 75g', 'SKU-PAP-A475')">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>Solicitar Compra / Entrada</span>
+</button>
+</div>
+<!-- Critical Card 3: Mouse Sem Fio -->
+<div class="rounded-xl bg-surface-canvas p-space-md flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex items-start gap-space-sm">
+<img class="w-14 h-14 rounded-lg object-cover flex-shrink-0" data-alt="Ergonomic matte black 2.4GHz wireless optical computer mouse with nano receiver displayed on brushed metal surface with technical lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-P3AQpODurK9QEA60I5RnYgYjwZk6zPhLZVCwheiGQlUNl5jMv3Q2g7ED5CbNA9btD4lJRyDrNOXpq9gIpA5uBMf-3Ugt0RMZ2WzQcL-_v4hDaP5vOn_0MCcl7_y_5B0NVRu6maJQLNZq8FpIGTVzZdHWgF9VNQ3tneXWpuPewF-6li0pC8e8wHwhVm7ifOMjx7g95nSEd1AIbYXPl-MMxl9h3a_dmz_5wiejSArzSoX9WvmzMae0"/>
+<div class="min-w-0 flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">SKU-PER-MOU24</span>
+<h3 class="font-headline-sm text-headline-sm text-primary truncate" title="Mouse Óptico Sem Fio 2.4GHz">Mouse Sem Fio 2.4GHz</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Unidade</p>
+</div>
+</div>
+<div class="my-space-md p-space-sm rounded-lg bg-stock-critical-bg">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-stock-critical-text uppercase font-bold">Saldo: 02 un</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mínimo: 03 un</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-card overflow-hidden">
+<div class="h-full bg-status-rejected w-[66%] transition-all"></div>
+</div>
+<span class="font-body-sm text-body-sm text-stock-critical-text block mt-1.5 font-medium">Déficit: -1 unidade</span>
+</div>
+<button class="w-full py-2 px-space-sm rounded-lg bg-stock-critical-text hover:bg-status-rejected text-on-primary font-headline-sm text-label-md flex items-center justify-center gap-1.5 transition-colors shadow-sm" onclick="triggerReplenish('Mouse Sem Fio 2.4GHz', 'SKU-PER-MOU24')">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>Solicitar Compra / Entrada</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Workhorse Section: Tabela Geral de Estoque em Tempo Real (view: vw_estoque) -->
+<div class="rounded-xl bg-surface-card p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Table Toolbar: Search, Filters & Meta -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-primary">Estoque em Tempo Real</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-subtle font-code-num text-label-sm text-on-surface-variant">vw_estoque</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Visão unificada de saldos, níveis mínimos regulamentares e capacidade física em depósito.</p>
+</div>
+<!-- Quick Search & Category Pills -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm">
+<div class="relative min-w-[260px]">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-outline pointer-events-none">filter_alt</span>
+<input class="w-full pl-9 pr-space-md py-2 rounded-lg bg-surface-canvas text-charcoal-black font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-card focus:shadow-sm transition-all" id="inventory-search" oninput="filterInventory()" placeholder="Filtrar por nome ou código..." type="text"/>
+</div>
+<button class="px-3 py-2 rounded-lg bg-surface-subtle hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-colors flex items-center justify-center gap-1" onclick="resetTable()">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Reset</span>
+</button>
+</div>
+</div>
+<!-- Category Filter Tabs -->
+<div class="flex items-center gap-1 overflow-x-auto pb-1 text-label-md" id="category-tabs">
+<button class="cat-pill px-3 py-1.5 rounded-lg bg-primary text-on-primary font-headline-sm text-label-md whitespace-nowrap transition-all shadow-sm" onclick="selectCategory('Todos', this)">Todos (9)</button>
+<button class="cat-pill px-3 py-1.5 rounded-lg bg-surface-subtle text-on-surface-variant hover:text-on-surface font-headline-sm text-label-md whitespace-nowrap transition-all" onclick="selectCategory('Papel', this)">Papelaria &amp; Resmas (2)</button>
+<button class="cat-pill px-3 py-1.5 rounded-lg bg-surface-subtle text-on-surface-variant hover:text-on-surface font-headline-sm text-label-md whitespace-nowrap transition-all" onclick="selectCategory('Toner', this)">Toners &amp; Tinta (2)</button>
+<button class="cat-pill px-3 py-1.5 rounded-lg bg-surface-subtle text-on-surface-variant hover:text-on-surface font-headline-sm text-label-md whitespace-nowrap transition-all" onclick="selectCategory('Mouse', this)">Mouses (2)</button>
+<button class="cat-pill px-3 py-1.5 rounded-lg bg-surface-subtle text-on-surface-variant hover:text-on-surface font-headline-sm text-label-md whitespace-nowrap transition-all" onclick="selectCategory('Teclado', this)">Teclados (2)</button>
+<button class="cat-pill px-3 py-1.5 rounded-lg bg-surface-subtle text-on-surface-variant hover:text-on-surface font-headline-sm text-label-md whitespace-nowrap transition-all" onclick="selectCategory('Outros', this)">Cabos &amp; Conectividade (1)</button>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto rounded-xl">
+<table class="w-full text-left font-body-md text-body-md" id="inventory-table">
+<thead>
+<tr class="bg-surface-subtle text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md">Código / ID</th>
+<th class="py-3 px-space-md">Item / Descrição</th>
+<th class="py-3 px-space-md">Categoria</th>
+<th class="py-3 px-space-md text-center">Unidade</th>
+<th class="py-3 px-space-md text-right">Estoque Mínimo</th>
+<th class="py-3 px-space-md min-w-[200px]">Saldo Atual &amp; Capacidade</th>
+<th class="py-3 px-space-md text-center">Status</th>
+<th class="py-3 px-space-md text-right">Ações Rápidas</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-variant/30 font-body-md" id="table-body">
+<!-- Row 1: Toner HP 85A (Crítico) -->
+<tr class="item-row hover:bg-primary/5 transition-colors" data-category="Toner" data-search="toner hp 85a ce285a sku-ton-85a">
+<td class="py-3 px-space-md font-code-num text-code-num text-on-surface-variant font-semibold">SKU-TON-85A</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">print</span>
+<span class="font-headline-sm text-body-md text-primary font-semibold">Toner HP LaserJet 85A (CE285A)</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-subtle text-on-surface-variant font-label-sm text-label-sm">Toner</span>
+</td>
+<td class="py-3 px-space-md text-center font-code-num text-body-sm">Cartucho</td>
+<td class="py-3 px-space-md text-right font-code-num text-code-num text-on-surface-variant">2 un</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-code-num text-code-num text-stock-critical-text font-bold w-12 text-right">01 un</span>
+<div class="flex-1 h-2 rounded-full bg-surface-subtle overflow-hidden">
+<div class="h-full bg-status-rejected w-[20%]"></div>
+</div>
+<span class="font-label-sm text-body-sm text-on-surface-variant">/5 max</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-stock-critical-bg text-stock-critical-text font-label-sm text-label-sm font-bold uppercase">
+<span class="h-1.5 w-1.5 rounded-full bg-status-rejected"></span>
+                Estoque Baixo
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-secondary hover:text-on-secondary text-primary transition-colors" onclick="requestItem('Toner HP LaserJet 85A')" title="Requisitar Insumo">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-surface-container text-on-surface-variant transition-colors" onclick="openHistory('SKU-TON-85A', 'Toner HP LaserJet 85A')" title="Ver Histórico de Auditoria">
+<span class="material-symbols-outlined text-[16px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Papel A4 75g (Crítico) -->
+<tr class="item-row hover:bg-primary/5 transition-colors" data-category="Papel" data-search="resma papel a4 75g chamex papelaria sku-pap-a475">
+<td class="py-3 px-space-md font-code-num text-code-num text-on-surface-variant font-semibold">SKU-PAP-A475</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">description</span>
+<span class="font-headline-sm text-body-md text-primary font-semibold">Resma Papel Sulfite A4 75g (500fls)</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-subtle text-on-surface-variant font-label-sm text-label-sm">Papel</span>
+</td>
+<td class="py-3 px-space-md text-center font-code-num text-body-sm">Resma</td>
+<td class="py-3 px-space-md text-right font-code-num text-code-num text-on-surface-variant">20 res</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-code-num text-code-num text-stock-critical-text font-bold w-12 text-right">14 res</span>
+<div class="flex-1 h-2 rounded-full bg-surface-subtle overflow-hidden">
+<div class="h-full bg-status-rejected w-[28%]"></div>
+</div>
+<span class="font-label-sm text-body-sm text-on-surface-variant">/50 max</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-stock-critical-bg text-stock-critical-text font-label-sm text-label-sm font-bold uppercase">
+<span class="h-1.5 w-1.5 rounded-full bg-status-rejected"></span>
+                Estoque Baixo
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-secondary hover:text-on-secondary text-primary transition-colors" onclick="requestItem('Resma Papel Sulfite A4 75g')" title="Requisitar Insumo">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-surface-container text-on-surface-variant transition-colors" onclick="openHistory('SKU-PAP-A475', 'Resma Papel Sulfite A4 75g')" title="Ver Histórico de Auditoria">
+<span class="material-symbols-outlined text-[16px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Mouse Sem Fio (Crítico) -->
+<tr class="item-row hover:bg-primary/5 transition-colors" data-category="Mouse" data-search="mouse sem fio 2.4ghz periferico sku-per-mou24">
+<td class="py-3 px-space-md font-code-num text-code-num text-on-surface-variant font-semibold">SKU-PER-MOU24</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">mouse</span>
+<span class="font-headline-sm text-body-md text-primary font-semibold">Mouse Óptico Sem Fio 2.4GHz USB</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-subtle text-on-surface-variant font-label-sm text-label-sm">Mouse</span>
+</td>
+<td class="py-3 px-space-md text-center font-code-num text-body-sm">Unidade</td>
+<td class="py-3 px-space-md text-right font-code-num text-code-num text-on-surface-variant">3 un</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-code-num text-code-num text-stock-critical-text font-bold w-12 text-right">02 un</span>
+<div class="flex-1 h-2 rounded-full bg-surface-subtle overflow-hidden">
+<div class="h-full bg-status-rejected w-[20%]"></div>
+</div>
+<span class="font-label-sm text-body-sm text-on-surface-variant">/10 max</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-stock-critical-bg text-stock-critical-text font-label-sm text-label-sm font-bold uppercase">
+<span class="h-1.5 w-1.5 rounded-full bg-status-rejected"></span>
+                Estoque Baixo
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-secondary hover:text-on-secondary text-primary transition-colors" onclick="requestItem('Mouse Óptico Sem Fio 2.4GHz')" title="Requisitar Insumo">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-surface-container text-on-surface-variant transition-colors" onclick="openHistory('SKU-PER-MOU24', 'Mouse Óptico Sem Fio 2.4GHz')" title="Ver Histórico de Auditoria">
+<span class="material-symbols-outlined text-[16px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Toner Brother TN-1060 (Normal) -->
+<tr class="item-row hover:bg-primary/5 transition-colors" data-category="Toner" data-search="toner brother tn-1060 dcp-1602 sku-ton-tn1060">
+<td class="py-3 px-space-md font-code-num text-code-num text-on-surface-variant font-semibold">SKU-TON-1060</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">print</span>
+<span class="font-headline-sm text-body-md text-primary font-semibold">Toner Brother TN-1060 Preto</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-subtle text-on-surface-variant font-label-sm text-label-sm">Toner</span>
+</td>
+<td class="py-3 px-space-md text-center font-code-num text-body-sm">Cartucho</td>
+<td class="py-3 px-space-md text-right font-code-num text-code-num text-on-surface-variant">2 un</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-code-num text-code-num text-primary font-bold w-12 text-right">04 un</span>
+<div class="flex-1 h-2 rounded-full bg-surface-subtle overflow-hidden">
+<div class="h-full bg-secondary w-[80%]"></div>
+</div>
+<span class="font-label-sm text-body-sm text-on-surface-variant">/5 max</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered font-label-sm text-label-sm font-bold uppercase">
+<span class="h-1.5 w-1.5 rounded-full bg-status-delivered"></span>
+                Normal
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-secondary hover:text-on-secondary text-primary transition-colors" onclick="requestItem('Toner Brother TN-1060')" title="Requisitar Insumo">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-surface-container text-on-surface-variant transition-colors" onclick="openHistory('SKU-TON-1060', 'Toner Brother TN-1060')" title="Ver Histórico de Auditoria">
+<span class="material-symbols-outlined text-[16px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Teclado USB Padrão ABNT2 (Normal) -->
+<tr class="item-row hover:bg-primary/5 transition-colors" data-category="Teclado" data-search="teclado usb abnt2 padrão corporativo dell sku-per-tecab2">
+<td class="py-3 px-space-md font-code-num text-code-num text-on-surface-variant font-semibold">SKU-PER-TEC01</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">keyboard</span>
+<span class="font-headline-sm text-body-md text-primary font-semibold">Teclado USB Slim ABNT2 Preto</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-subtle text-on-surface-variant font-label-sm text-label-sm">Teclado</span>
+</td>
+<td class="py-3 px-space-md text-center font-code-num text-body-sm">Unidade</td>
+<td class="py-3 px-space-md text-right font-code-num text-code-num text-on-surface-variant">3 un</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-code-num text-code-num text-primary font-bold w-12 text-right">07 un</span>
+<div class="flex-1 h-2 rounded-full bg-surface-subtle overflow-hidden">
+<div class="h-full bg-secondary w-[70%]"></div>
+</div>
+<span class="font-label-sm text-body-sm text-on-surface-variant">/10 max</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered font-label-sm text-label-sm font-bold uppercase">
+<span class="h-1.5 w-1.5 rounded-full bg-status-delivered"></span>
+                Normal
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-secondary hover:text-on-secondary text-primary transition-colors" onclick="requestItem('Teclado USB Slim ABNT2')" title="Requisitar Insumo">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-surface-container text-on-surface-variant transition-colors" onclick="openHistory('SKU-PER-TEC01', 'Teclado USB Slim ABNT2')" title="Ver Histórico de Auditoria">
+<span class="material-symbols-outlined text-[16px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Mouse Pad Ergonômico com Apoio (Normal) -->
+<tr class="item-row hover:bg-primary/5 transition-colors" data-category="Mouse" data-search="mouse pad ergonomico gel apoio pulso sku-per-mpad">
+<td class="py-3 px-space-md font-code-num text-code-num text-on-surface-variant font-semibold">SKU-PER-PAD02</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">space_dashboard</span>
+<span class="font-headline-sm text-body-md text-primary font-semibold">Mouse Pad Ergonômico em Gel Preto</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-subtle text-on-surface-variant font-label-sm text-label-sm">Mouse</span>
+</td>
+<td class="py-3 px-space-md text-center font-code-num text-body-sm">Unidade</td>
+<td class="py-3 px-space-md text-right font-code-num text-code-num text-on-surface-variant">4 un</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-code-num text-code-num text-primary font-bold w-12 text-right">09 un</span>
+<div class="flex-1 h-2 rounded-full bg-surface-subtle overflow-hidden">
+<div class="h-full bg-secondary w-[60%]"></div>
+</div>
+<span class="font-label-sm text-body-sm text-on-surface-variant">/15 max</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered font-label-sm text-label-sm font-bold uppercase">
+<span class="h-1.5 w-1.5 rounded-full bg-status-delivered"></span>
+                Normal
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-secondary hover:text-on-secondary text-primary transition-colors" onclick="requestItem('Mouse Pad Ergonômico')" title="Requisitar Insumo">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-surface-container text-on-surface-variant transition-colors" onclick="openHistory('SKU-PER-PAD02', 'Mouse Pad Ergonômico')" title="Ver Histórico de Auditoria">
+<span class="material-symbols-outlined text-[16px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Bobina Papel Térmico Cupom (Normal) -->
+<tr class="item-row hover:bg-primary/5 transition-colors" data-category="Papel" data-search="bobina termica papel amarelo pdv 80x40 sku-pap-bob80">
+<td class="py-3 px-space-md font-code-num text-code-num text-on-surface-variant font-semibold">SKU-PAP-BOB80</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">receipt</span>
+<span class="font-headline-sm text-body-md text-primary font-semibold">Bobina Térmica 80mm x 40m Amarela</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-subtle text-on-surface-variant font-label-sm text-label-sm">Papel</span>
+</td>
+<td class="py-3 px-space-md text-center font-code-num text-body-sm">Unidade</td>
+<td class="py-3 px-space-md text-right font-code-num text-code-num text-on-surface-variant">5 un</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-code-num text-code-num text-primary font-bold w-12 text-right">18 un</span>
+<div class="flex-1 h-2 rounded-full bg-surface-subtle overflow-hidden">
+<div class="h-full bg-secondary w-[90%]"></div>
+</div>
+<span class="font-label-sm text-body-sm text-on-surface-variant">/20 max</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered font-label-sm text-label-sm font-bold uppercase">
+<span class="h-1.5 w-1.5 rounded-full bg-status-delivered"></span>
+                Normal
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-secondary hover:text-on-secondary text-primary transition-colors" onclick="requestItem('Bobina Térmica 80x40')" title="Requisitar Insumo">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-surface-container text-on-surface-variant transition-colors" onclick="openHistory('SKU-PAP-BOB80', 'Bobina Térmica 80x40')" title="Ver Histórico de Auditoria">
+<span class="material-symbols-outlined text-[16px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: Kit Teclado e Mouse Sem Fio (Normal) -->
+<tr class="item-row hover:bg-primary/5 transition-colors" data-category="Teclado" data-search="kit teclado e mouse wireless logitech combo mk220 sku-per-kitwl">
+<td class="py-3 px-space-md font-code-num text-code-num text-on-surface-variant font-semibold">SKU-PER-KIT03</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">devices</span>
+<span class="font-headline-sm text-body-md text-primary font-semibold">Kit Teclado + Mouse Sem Fio ABNT2</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-subtle text-on-surface-variant font-label-sm text-label-sm">Teclado</span>
+</td>
+<td class="py-3 px-space-md text-center font-code-num text-body-sm">Kit</td>
+<td class="py-3 px-space-md text-right font-code-num text-code-num text-on-surface-variant">2 kits</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-code-num text-code-num text-primary font-bold w-12 text-right">05 kits</span>
+<div class="flex-1 h-2 rounded-full bg-surface-subtle overflow-hidden">
+<div class="h-full bg-secondary w-[62%]"></div>
+</div>
+<span class="font-label-sm text-body-sm text-on-surface-variant">/8 max</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered font-label-sm text-label-sm font-bold uppercase">
+<span class="h-1.5 w-1.5 rounded-full bg-status-delivered"></span>
+                Normal
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-secondary hover:text-on-secondary text-primary transition-colors" onclick="requestItem('Kit Teclado + Mouse Sem Fio')" title="Requisitar Insumo">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-surface-container text-on-surface-variant transition-colors" onclick="openHistory('SKU-PER-KIT03', 'Kit Teclado + Mouse Sem Fio')" title="Ver Histórico de Auditoria">
+<span class="material-symbols-outlined text-[16px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 9: Cabo Patch Cord RJ45 Cat6 (Normal) -->
+<tr class="item-row hover:bg-primary/5 transition-colors" data-category="Outros" data-search="cabo patch cord rj45 cat6 rede furukawa 2m azul conectividade outros sku-cab-cat62m">
+<td class="py-3 px-space-md font-code-num text-code-num text-on-surface-variant font-semibold">SKU-CAB-CAT6</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">settings_ethernet</span>
+<span class="font-headline-sm text-body-md text-primary font-semibold">Patch Cord RJ45 Cat6 2.0m Azul</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-subtle text-on-surface-variant font-label-sm text-label-sm">Outros</span>
+</td>
+<td class="py-3 px-space-md text-center font-code-num text-body-sm">Unidade</td>
+<td class="py-3 px-space-md text-right font-code-num text-code-num text-on-surface-variant">6 un</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-code-num text-code-num text-primary font-bold w-12 text-right">24 un</span>
+<div class="flex-1 h-2 rounded-full bg-surface-subtle overflow-hidden">
+<div class="h-full bg-secondary w-[80%]"></div>
+</div>
+<span class="font-label-sm text-body-sm text-on-surface-variant">/30 max</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered font-label-sm text-label-sm font-bold uppercase">
+<span class="h-1.5 w-1.5 rounded-full bg-status-delivered"></span>
+                Normal
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-secondary hover:text-on-secondary text-primary transition-colors" onclick="requestItem('Patch Cord RJ45 Cat6')" title="Requisitar Insumo">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-subtle hover:bg-surface-container text-on-surface-variant transition-colors" onclick="openHistory('SKU-CAB-CAT6', 'Patch Cord RJ45 Cat6')" title="Ver Histórico de Auditoria">
+<span class="material-symbols-outlined text-[16px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer & Active SKUs Summary -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span>Exibindo <strong>9</strong> itens cadastrados em <code class="font-code-num text-primary">public.vw_estoque</code></span>
+<span>•</span>
+<span class="text-stock-critical-text font-semibold">3 em nível crítico de ressuprimento</span>
+</div>
+<div class="flex items-center gap-2 font-code-num">
+<span class="px-2 py-0.5 rounded bg-surface-subtle text-primary">Última atualização: 14:32:09</span>
+</div>
+</div>
+</div>
+<!-- Bottom Split Grid: Últimas Requisições do Setor + Gráfico de Consumo por Categoria -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-md">
+<!-- Left Column: Últimas Requisições do Setor TI (7 cols) -->
+<div class="lg:col-span-7 rounded-xl bg-surface-card p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<div class="p-2 rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Últimas Requisições do Setor TI</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rastreabilidade em tempo real dos pedidos emitidos recentemente.</p>
+</div>
+</div>
+<a class="font-label-sm text-label-sm text-secondary hover:underline font-semibold flex items-center" data-path="minhas-requisicoes" href="#">
+            Ver todas
+            <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<div class="mt-space-md space-y-space-sm">
+<!-- Req Item 1 -->
+<div class="p-space-sm rounded-lg bg-surface-canvas flex items-center justify-between gap-space-sm hover:bg-surface-subtle/70 transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="font-code-num text-code-num text-primary font-bold">#REQ-2024-089</span>
+<div class="min-w-0">
+<p class="font-headline-sm text-body-md text-primary truncate">1x Toner HP LaserJet 85A</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sol.: Ana Souza (Suporte N1) • Hoje 11:20</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-pending-bg text-status-pending font-label-sm text-label-sm font-bold uppercase tracking-wider whitespace-nowrap">Pendente</span>
+</div>
+<!-- Req Item 2 -->
+<div class="p-space-sm rounded-lg bg-surface-canvas flex items-center justify-between gap-space-sm hover:bg-surface-subtle/70 transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="font-code-num text-code-num text-primary font-bold">#REQ-2024-088</span>
+<div class="min-w-0">
+<p class="font-headline-sm text-body-md text-primary truncate">3x Resma Papel Sulfite A4 75g</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sol.: Roberto Lima (Infra) • Hoje 09:45</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-approved-bg text-status-approved font-label-sm text-label-sm font-bold uppercase tracking-wider whitespace-nowrap">Aprovada</span>
+</div>
+<!-- Req Item 3 -->
+<div class="p-space-sm rounded-lg bg-surface-canvas flex items-center justify-between gap-space-sm hover:bg-surface-subtle/70 transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="font-code-num text-code-num text-primary font-bold">#REQ-2024-084</span>
+<div class="min-w-0">
+<p class="font-headline-sm text-body-md text-primary truncate">1x Mouse Óptico Sem Fio 2.4GHz</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sol.: Carlos Silva (Almoxarife TI) • Ontem 16:10</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered font-label-sm text-label-sm font-bold uppercase tracking-wider whitespace-nowrap">Entregue</span>
+</div>
+<!-- Req Item 4 -->
+<div class="p-space-sm rounded-lg bg-surface-canvas flex items-center justify-between gap-space-sm hover:bg-surface-subtle/70 transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="font-code-num text-code-num text-primary font-bold">#REQ-2024-079</span>
+<div class="min-w-0">
+<p class="font-headline-sm text-body-md text-primary truncate">2x Teclado USB Slim ABNT2</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sol.: Marcos Paulo (DevOps) • 22/10 14:02</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered font-label-sm text-label-sm font-bold uppercase tracking-wider whitespace-nowrap">Entregue</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Governança: aprovações obrigatórias para saldo abaixo da cota</span>
+<button class="font-headline-sm text-label-md text-primary hover:text-secondary flex items-center gap-1" onclick="simulateBatchAction()">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+          Atualizar fila
+        </button>
+</div>
+</div>
+<!-- Right Column: Consumo por Categoria Visual (5 cols) -->
+<div class="lg:col-span-5 rounded-xl bg-surface-card p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<div class="p-2 rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-[20px]">pie_chart</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Consumo por Categoria (Mês)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Distribuição percentual das 48 saídas registradas.</p>
+</div>
+</div>
+<span class="font-code-num text-label-sm text-secondary font-bold">Out/2024</span>
+</div>
+<!-- Inline SVG Donut Visualization with Legend -->
+<div class="mt-space-md flex flex-col sm:flex-row items-center gap-space-lg">
+<div class="relative w-36 h-36 flex-shrink-0 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<!-- Background Ring -->
+<circle class="text-surface-subtle" cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke="currentColor" stroke-width="4.5"></circle>
+<!-- Segment 1: Papelaria (42%) -->
+<circle class="text-primary" cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke="currentColor" stroke-dasharray="42 58" stroke-dashoffset="0" stroke-width="4.5"></circle>
+<!-- Segment 2: Toner (27%) -->
+<circle class="text-secondary" cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke="currentColor" stroke-dasharray="27 73" stroke-dashoffset="-42" stroke-width="4.5"></circle>
+<!-- Segment 3: Periféricos (Mouse/Teclado) (21%) -->
+<circle class="text-status-pending" cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke="currentColor" stroke-dasharray="21 79" stroke-dashoffset="-69" stroke-width="4.5"></circle>
+<!-- Segment 4: Conectividade / Outros (10%) -->
+<circle class="text-status-delivered" cx="18" cy="18" fill="transparent" r="15.91549430918954" stroke="currentColor" stroke-dasharray="10 90" stroke-dashoffset="-90" stroke-width="4.5"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-headline-sm text-headline-sm text-primary leading-tight">48</span>
+<span class="font-label-sm text-[10px] uppercase text-on-surface-variant">Saídas</span>
+</div>
+</div>
+<!-- Metric Breakdown Legend -->
+<div class="flex-1 w-full space-y-2">
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary inline-block"></span>
+<span class="font-headline-sm text-body-md text-primary">Papel &amp; Resmas</span>
+</div>
+<span class="font-code-num text-code-num font-bold text-primary">42% (20 un)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary inline-block"></span>
+<span class="font-headline-sm text-body-md text-primary">Toners &amp; Tintas</span>
+</div>
+<span class="font-code-num text-code-num font-bold text-primary">27% (13 un)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-status-pending inline-block"></span>
+<span class="font-headline-sm text-body-md text-primary">Mouses &amp; Teclados</span>
+</div>
+<span class="font-code-num text-code-num font-bold text-primary">21% (10 un)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-status-delivered inline-block"></span>
+<span class="font-headline-sm text-body-md text-primary">Cabos &amp; Rede</span>
+</div>
+<span class="font-code-num text-code-num font-bold text-primary">10% (5 un)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-canvas flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-status-pending">lightbulb</span>
+          Dica de Compra:
+        </span>
+<span class="font-headline-sm text-body-sm text-primary font-semibold">Agrupar Papel A4 + Toner 85A</span>
+</div>
+</div>
+</div>
+<!-- Interactive Feedback Toast (Hidden by default, triggered by JS) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" id="action-toast">
+<div class="px-space-md py-3 rounded-xl bg-primary text-on-primary shadow-xl flex items-center gap-space-sm border-l-4 border-secondary">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed">check_circle</span>
+<span class="font-headline-sm text-body-md text-on-primary" id="toast-message">Ação executada com sucesso.</span>
+</div>
+</div>
+</div>
+<!-- Client-side Logic for Live Filtering, Dynamic Status and Replenishment Feedback -->
+<script>
+  // Set accurate formatted date in Portuguese
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const today = new Date();
+  const dateFormatted = today.toLocaleDateString('pt-BR', options);
+  const liveDateEl = document.getElementById('live-date');
+  if (liveDateEl) {
+    liveDateEl.textContent = dateFormatted.charAt(0).toUpperCase() + dateFormatted.slice(1);
+  }
+
+  // Filter items by category tab
+  function selectCategory(category, clickedBtn) {
+    const buttons = document.querySelectorAll('.cat-pill');
+    buttons.forEach(btn => {
+      btn.className = 'cat-pill px-3 py-1.5 rounded-lg bg-surface-subtle text-on-surface-variant hover:text-on-surface font-headline-sm text-label-md whitespace-nowrap transition-all';
+    });
+    clickedBtn.className = 'cat-pill px-3 py-1.5 rounded-lg bg-primary text-on-primary font-headline-sm text-label-md whitespace-nowrap transition-all shadow-sm';
+
+    const rows = document.querySelectorAll('.item-row');
+    rows.forEach(row => {
+      const rowCat = row.getAttribute('data-category');
+      if (category === 'Todos' || rowCat === category) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  // Quick Search Field Filter
+  function filterInventory() {
+    const input = document.getElementById('inventory-search').value.toLowerCase().trim();
+    const rows = document.querySelectorAll('.item-row');
+    rows.forEach(row => {
+      const searchable = row.getAttribute('data-search') || '';
+      if (!input || searchable.includes(input)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  // Reset filter inputs
+  function resetTable() {
+    const searchInput = document.getElementById('inventory-search');
+    if (searchInput) searchInput.value = '';
+    const allTab = document.querySelector('.cat-pill');
+    if (allTab) selectCategory('Todos', allTab);
+  }
+
+  // Trigger Purchase / Replenishment simulation
+  function triggerReplenish(itemName, sku) {
+    showToast(`Iniciada ordem de compra automática para: ${itemName} (${sku})`);
+  }
+
+  // Trigger item request simulation
+  function requestItem(itemName) {
+    showToast(`Adicionado ao carrinho de requisição: ${itemName}`);
+  }
+
+  // Open history prompt simulation
+  function openHistory(sku, itemName) {
+    showToast(`Carregando logs de auditoria para ${sku} - ${itemName}...`);
+  }
+
+  // Refresh batch
+  function simulateBatchAction() {
+    showToast('Fila de aprovações atualizada via SRCI Core.');
+  }
+
+  // Toast notifier helper
+  function showToast(message) {
+    const toast = document.getElementById('action-toast');
+    const toastMsg = document.getElementById('toast-message');
+    if (!toast || !toastMsg) return;
+
+    toastMsg.textContent = message;
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-20', 'opacity-0');
+    }, 3200);
+  }
+</script></main></div></body></html>

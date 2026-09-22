@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#fcf2e9", "status-pending": "#D97706", "outline-variant": "#c6c5d2", "status-rejected-bg": "#FEF2F2", "primary-fixed": "#dde1ff", "on-secondary": "#ffffff", "tertiary-container": "#002341", "error-container": "#ffdad6", "surface": "#fff8f4", "surface-container-highest": "#ebe1d8", "stock-critical-bg": "#FFF1F2", "background": "#fff8f4", "secondary-fixed-dim": "#c2c1ff", "surface-tint": "#4c5a9d", "on-primary-fixed-variant": "#334283", "on-secondary-container": "#fffbff", "charcoal-black": "#050505", "on-primary-container": "#7685cb", "status-cancelled-bg": "#F3F4F6", "stock-critical-text": "#991B1B", "inverse-primary": "#b8c3ff", "on-secondary-fixed-variant": "#3226c8", "on-tertiary-fixed-variant": "#00497e", "error": "#ba1a1a", "surface-canvas": "#F7F6F4", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "secondary": "#4a43dd", "tertiary": "#000c1c", "surface-subtle": "#EEE9E4", "status-cancelled": "#6B7280", "surface-variant": "#ebe1d8", "status-approved": "#2563EB", "status-rejected": "#DC2626", "surface-container-high": "#f1e6dd", "secondary-container": "#635ff7", "status-delivered": "#059669", "inverse-surface": "#35302a", "on-primary-fixed": "#001356", "on-tertiary-fixed": "#001d36", "status-approved-bg": "#EFF6FF", "surface-bright": "#fff8f4", "on-primary": "#ffffff", "on-surface": "#1f1b15", "secondary-fixed": "#e2dfff", "on-secondary-fixed": "#0d006a", "on-tertiary-container": "#438dd6", "surface-dim": "#e2d8cf", "status-delivered-bg": "#ECFDF5", "stock-critical-border": "#B91C1C", "primary-container": "#071a5c", "inverse-on-surface": "#f9efe6", "on-background": "#1f1b15", "on-surface-variant": "#454650", "surface-card": "#FFFFFF", "surface-container": "#f6ece3", "status-pending-bg": "#FEF3C7", "outline": "#767681", "on-error-container": "#93000a", "tertiary-fixed-dim": "#9fcaff", "on-tertiary": "#ffffff", "primary-fixed-dim": "#b8c3ff", "primary": "#00062e", "tertiary-fixed": "#d2e4ff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "1rem", "gutter-desktop": "1.5rem", "space-md": "0.75rem", "space-lg": "1.25rem", "margin-desktop": "2rem", "gutter": "1rem", "space-xl": "2rem", "margin-tablet": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-lg": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "code-num": [ "Inter" ], "label-md": [ "Inter" ], "headline-xl": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "body-sm": [ "Inter" ], "body-lg": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "label-sm": [ "Inter" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "16px", { "lineHeight": "22px", "fontWeight": "600" } ], "code-num": [ "14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-xl": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "800" } ] } } } };</script></head><body class="bg-surface-canvas font-body-md text-on-surface antialiased"><main class="w-full min-h-screen flex items-center justify-center p-space-lg"><div class="flex flex-col w-full">
+<div class="w-full max-w-6xl mx-auto my-auto py-space-md">
+<div class="grid grid-cols-1 lg:grid-cols-12 rounded-xl shadow-2xl overflow-hidden bg-primary text-on-primary">
+<!-- Lado Esquerdo: Identidade & Governança Corporativa -->
+<div class="lg:col-span-5 relative p-space-xl flex flex-col justify-between overflow-hidden bg-primary-container">
+<!-- Glows & Efeitos Decorativos de Fundo -->
+<div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-on-tertiary-container/15 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-lg">
+<!-- Topo Marca / Sistema -->
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-lowest/10 text-on-primary">
+<span class="material-symbols-outlined text-headline-sm">shield_person</span>
+</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed-dim block">Infraestrutura Corporativa</span>
+<span class="font-code-num text-body-sm text-surface-variant font-semibold">GATEWAY SECURE V1.0</span>
+</div>
+</div>
+<!-- Apresentação do SRCI -->
+<div class="mt-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-card/10 text-primary-fixed text-label-sm font-label-sm mb-space-sm">
+<span class="w-2 h-2 rounded-full bg-status-delivered animate-pulse"></span>
+              AMBIENTE SEGURO DE OPERAÇÕES
+            </div>
+<h1 class="font-headline-lg text-headline-lg text-surface-container-lowest leading-tight">
+              Governança e Rastreabilidade Total de Suprimentos
+            </h1>
+<p class="font-body-md text-body-md text-surface-variant/90 mt-space-sm leading-relaxed">
+              O SRCI centraliza o fluxo departamental de ordens, auditoria em tempo real de almoxarifado e conformidade de requisições internas de insumos corporativos.
+            </p>
+</div>
+<!-- Métricas e Protocolos -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/5 backdrop-blur-sm">
+<span class="font-code-num text-headline-md text-surface-container-lowest block">100%</span>
+<span class="font-body-sm text-body-sm text-surface-variant">Conformidade e RLS Ativa</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/5 backdrop-blur-sm">
+<span class="font-code-num text-headline-md text-surface-container-lowest block">0 Loss</span>
+<span class="font-body-sm text-body-sm text-surface-variant">Controle Anti-Duplicidade</span>
+</div>
+</div>
+</div>
+<!-- Rodapé do Lado Esquerdo -->
+<div class="relative z-10 pt-space-xl flex flex-col gap-space-xs text-surface-variant">
+<div class="flex items-center gap-space-xs text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-headline-sm text-secondary-container">lock</span>
+<span>Criptografia de Ponta a Ponta via Supabase Auth</span>
+</div>
+<p class="font-body-sm text-body-sm text-surface-variant/75">
+            Sessões monitoradas com políticas RLS por departamento e carimbo de tempo indelével.
+          </p>
+</div>
+</div>
+<!-- Lado Direito: Card de Autenticação -->
+<div class="lg:col-span-7 bg-surface-card text-on-surface p-space-xl flex flex-col justify-between">
+<div>
+<!-- Emblema / Logotipo com imagem oficial do prompt -->
+<div class="flex flex-col items-center text-center pb-space-md">
+<div class="relative w-36 h-36 flex items-center justify-center p-space-xs rounded-2xl bg-surface-canvas shadow-inner mb-space-sm">
+<img alt="Logotipo Oficial SRCI - Controle de Insumos" class="max-h-full max-w-full object-contain filter drop-shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqH5M5vePhT9VYLpFK7eOk-MmfxS4kSnC1sutMgT3N7bsiAda63ZpiUkEIUK-tVFc04YRy5dEQPheKiX6psDR_e-en3xhzFLPw3K8-V7FaYLIW55cPNxvDKsJT5295pTOUG_zOLQyTtIinBNf8LWtgK43dTN9WpDM3uz54Jpp981xGD5usUkWdvli_FrhhcZUQPvNgAmrccrwG81r8hkOei1Nqmv5ivMA5sAkffsZUQi2l5__DUVAelhyIXcZ1r5tWeQ"/>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary-container">
+              SRCI — Controle de Insumos
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Acesso exclusivo para colaboradores e gestores autorizados
+            </p>
+</div>
+<!-- Mensagem Institucional Restritiva (RF-01) -->
+<div class="mb-space-md p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-headline-sm mt-0.5">info</span>
+<div class="text-left">
+<span class="font-label-sm text-label-sm text-primary-container block uppercase tracking-wider">Acesso Restrito Institucional</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Contas criadas exclusivamente pela Gestão de TI (RF-01). Não há cadastro público. Em caso de dúvidas, acione o Service Desk.
+              </p>
+</div>
+</div>
+<!-- Formulário de Login -->
+<form class="flex flex-col gap-space-md" id="srci-login-form" onsubmit="event.preventDefault(); handleLoginSubmit();">
+<!-- Campo E-mail Corporativo -->
+<div class="flex flex-col gap-space-xs text-left">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="corporate-email">
+<span>E-mail Corporativo</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="domain-indicator">domínio: @empresa.com.br</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-headline-sm pointer-events-none">mail</span>
+<input class="w-full h-11 pl-10 pr-4 rounded bg-surface-canvas text-charcoal-black font-body-md text-body-md placeholder:text-outline outline-none transition-all duration-200 focus:bg-surface-card focus:shadow-md" id="corporate-email" name="corporate-email" oninput="validateCorporateDomain(this)" placeholder="usuario@empresa.com.br" required="" type="email"/>
+</div>
+<span class="font-body-sm text-body-sm text-status-rejected hidden" id="email-feedback">
+                Insira obrigatoriamente um endereço corporativo válido finalizado em @empresa.com.br.
+              </span>
+</div>
+<!-- Campo Senha -->
+<div class="flex flex-col gap-space-xs text-left">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface" for="corporate-password">Senha de Acesso</label>
+<button class="font-label-sm text-label-sm text-secondary-container hover:underline focus:outline-none" onclick="triggerPasswordResetNotice()" type="button">
+                  Esqueci minha senha (RF-03)
+                </button>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-headline-sm pointer-events-none">lock</span>
+<input class="w-full h-11 pl-10 pr-11 rounded bg-surface-canvas text-charcoal-black font-body-md text-body-md placeholder:text-outline outline-none transition-all duration-200 focus:bg-surface-card focus:shadow-md" id="corporate-password" name="corporate-password" placeholder="••••••••••••" required="" type="password"/>
+<button aria-label="Alternar visibilidade da senha" class="absolute right-3 p-1 rounded text-outline hover:text-on-surface transition-colors focus:outline-none" id="toggle-password-btn" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-headline-sm" id="eye-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Botão de Ação Primário -->
+<button class="w-full h-12 mt-space-xs rounded bg-primary-container text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs shadow-md hover:bg-secondary transition-all active:scale-[0.99] focus:outline-none" id="btn-login-submit" type="submit">
+<span>Entrar no Sistema</span>
+<span class="material-symbols-outlined text-headline-sm">arrow_forward</span>
+</button>
+</form>
+<!-- Feedback de Notificação Rápida -->
+<div class="mt-space-sm p-space-sm rounded-lg hidden transition-all duration-300" id="login-feedback-box"></div>
+<!-- Simulador de Perfis & Redirecionamento Automático (RF-04) -->
+<div class="mt-space-lg pt-space-md bg-surface-canvas/60 rounded-xl p-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">hub</span>
+                Simulador de Acesso por Perfil (RF-04)
+              </span>
+<span class="font-body-sm text-body-sm text-outline">Preenchimento rápido</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-xs">
+<!-- Perfil 1: Solicitante -->
+<button class="flex flex-col items-start p-space-xs rounded bg-surface-card text-left transition-all hover:bg-surface-container-high group focus:outline-none shadow-sm" onclick="fillRoleProfile('solicitante')" type="button">
+<div class="flex items-center gap-1 w-full justify-between">
+<span class="font-label-sm text-label-sm text-on-surface group-hover:text-primary-container">Solicitante</span>
+<span class="material-symbols-outlined text-body-sm text-status-pending">send</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate w-full">Nova Requisição</span>
+</button>
+<!-- Perfil 2: Aprovador / Gestor -->
+<button class="flex flex-col items-start p-space-xs rounded bg-surface-card text-left transition-all hover:bg-surface-container-high group focus:outline-none shadow-sm" onclick="fillRoleProfile('aprovador')" type="button">
+<div class="flex items-center gap-1 w-full justify-between">
+<span class="font-label-sm text-label-sm text-on-surface group-hover:text-primary-container">Gestor</span>
+<span class="material-symbols-outlined text-body-sm text-status-approved">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate w-full">Fila de Aprovação</span>
+</button>
+<!-- Perfil 3: Almoxarife -->
+<button class="flex flex-col items-start p-space-xs rounded bg-surface-card text-left transition-all hover:bg-surface-container-high group focus:outline-none shadow-sm" onclick="fillRoleProfile('almoxarife')" type="button">
+<div class="flex items-center gap-1 w-full justify-between">
+<span class="font-label-sm text-label-sm text-on-surface group-hover:text-primary-container">Almoxarife</span>
+<span class="material-symbols-outlined text-body-sm text-status-delivered">inventory_2</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate w-full">Entregas &amp; Baixas</span>
+</button>
+<!-- Perfil 4: Administrador TI -->
+<button class="flex flex-col items-start p-space-xs rounded bg-surface-card text-left transition-all hover:bg-surface-container-high group focus:outline-none shadow-sm" onclick="fillRoleProfile('admin')" type="button">
+<div class="flex items-center gap-1 w-full justify-between">
+<span class="font-label-sm text-label-sm text-on-surface group-hover:text-primary-container">Admin TI</span>
+<span class="material-symbols-outlined text-body-sm text-secondary-container">admin_panel_settings</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate w-full">Auditoria &amp; Usuários</span>
+</button>
+</div>
+<!-- Detalhe do Redirecionamento Dinâmico -->
+<div class="mt-space-xs pt-space-xs flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant" id="role-destination-hint">
+<span class="material-symbols-outlined text-body-sm text-outline">alt_route</span>
+<span id="role-destination-text">Clique em um perfil para visualizar rota de direcionamento (RF-04)</span>
+</div>
+</div>
+</div>
+<!-- Rodapé Corporativo e Informações de Segurança -->
+<div class="mt-space-lg pt-space-sm flex flex-col md:flex-row items-center justify-between text-on-surface-variant gap-space-xs font-body-sm text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-status-delivered"></span>
+<span>Versão SRCI v1.0.4-PROD</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-body-md text-secondary-container">verified_user</span>
+<span>Supabase Auth &amp; RLS Protegido</span>
+</div>
+<span class="text-outline">Divisão de Tecnologia Corporativa</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Perfis pré-definidos para teste de compliance e visualização de rotas RF-04
+  const testProfiles = {
+    solicitante: {
+      email: 'solicitante.operacional@empresa.com.br',
+      role: 'Solicitante Departamental',
+      targetRoute: '/minhas-requisicoes (Painel do Solicitante com catálogo de insumos)',
+      targetBadge: 'bg-status-pending-bg text-status-pending'
+    },
+    aprovador: {
+      email: 'gestor.departamento@empresa.com.br',
+      role: 'Aprovador / Gestor de Centro de Custo',
+      targetRoute: '/aprovacoes/pendentes (Fila de autorização de requisições de equipes)',
+      targetBadge: 'bg-status-approved-bg text-status-approved'
+    },
+    almoxarife: {
+      email: 'supervisor.almoxarifado@empresa.com.br',
+      role: 'Almoxarife / Gestor de Estoque',
+      targetRoute: '/almoxarifado/expedicao (Baixas de inventário, separação e estoque crítico)',
+      targetBadge: 'bg-status-delivered-bg text-status-delivered'
+    },
+    admin: {
+      email: 'governanca.ti@empresa.com.br',
+      role: 'Administrador de TI & Governança',
+      targetRoute: '/admin/auditoria-geral (Gestão de acessos RF-01, logs e conformidade global)',
+      targetBadge: 'bg-primary-container text-on-primary'
+    }
+  };
+
+  function fillRoleProfile(roleKey) {
+    const profile = testProfiles[roleKey];
+    if (!profile) return;
+
+    const emailInput = document.getElementById('corporate-email');
+    const passwordInput = document.getElementById('corporate-password');
+    const destinationText = document.getElementById('role-destination-text');
+
+    emailInput.value = profile.email;
+    passwordInput.value = 'Corporativo@2025';
+    validateCorporateDomain(emailInput);
+
+    destinationText.innerHTML = `<strong>${profile.role}</strong> redireciona automaticamente para: <span class="text-primary-container underline font-code-num">${profile.targetRoute}</span>`;
+  }
+
+  function validateCorporateDomain(input) {
+    const feedback = document.getElementById('email-feedback');
+    const indicator = document.getElementById('domain-indicator');
+    const val = input.value.trim().toLowerCase();
+
+    if (val.length === 0) {
+      feedback.classList.add('hidden');
+      indicator.classList.remove('text-status-rejected', 'text-status-delivered');
+      indicator.classList.add('text-on-surface-variant');
+      return true;
+    }
+
+    if (!val.endsWith('@empresa.com.br')) {
+      feedback.classList.remove('hidden');
+      indicator.classList.remove('text-on-surface-variant', 'text-status-delivered');
+      indicator.classList.add('text-status-rejected');
+      return false;
+    } else {
+      feedback.classList.add('hidden');
+      indicator.classList.remove('text-on-surface-variant', 'text-status-rejected');
+      indicator.classList.add('text-status-delivered');
+      return true;
+    }
+  }
+
+  function togglePasswordVisibility() {
+    const passwordInput = document.getElementById('corporate-password');
+    const eyeIcon = document.getElementById('eye-icon');
+
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      eyeIcon.textContent = 'visibility_off';
+    } else {
+      passwordInput.type = 'password';
+      eyeIcon.textContent = 'visibility';
+    }
+  }
+
+  function triggerPasswordResetNotice() {
+    const emailVal = document.getElementById('corporate-email').value.trim();
+    const feedbackBox = document.getElementById('login-feedback-box');
+    feedbackBox.className = 'mt-space-sm p-space-sm rounded-lg bg-surface-container-high text-on-surface block';
+
+    if (emailVal && emailVal.endsWith('@empresa.com.br')) {
+      feedbackBox.innerHTML = `
+        <div class="flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-secondary-container">forward_to_inbox</span>
+          <span class="font-body-sm text-body-sm font-semibold text-primary-container">Link de redefinição enviado via Supabase Auth (RF-03).</span>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Verifique a caixa postal de <strong>${emailVal}</strong> para instruções de acesso seguro.</p>
+      `;
+    } else {
+      feedbackBox.innerHTML = `
+        <div class="flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-status-pending">warning</span>
+          <span class="font-body-sm text-body-sm font-semibold text-status-pending">Informe seu e-mail corporativo</span>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Preencha o campo de e-mail corporativo (@empresa.com.br) antes de solicitar o link de redefinição.</p>
+      `;
+    }
+  }
+
+  function handleLoginSubmit() {
+    const emailInput = document.getElementById('corporate-email');
+    const passwordInput = document.getElementById('corporate-password');
+    const feedbackBox = document.getElementById('login-feedback-box');
+    const submitBtn = document.getElementById('btn-login-submit');
+
+    const isValidDomain = validateCorporateDomain(emailInput);
+    if (!isValidDomain) {
+      emailInput.focus();
+      return;
+    }
+
+    // Feedback visual de processamento seguro
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `
+      <span class="inline-block w-4 h-4 rounded-full border-2 border-on-primary border-t-transparent animate-spin"></span>
+      <span>Autenticando via RLS...</span>
+    `;
+
+    setTimeout(() => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = `
+        <span>Entrar no Sistema</span>
+        <span class="material-symbols-outlined text-headline-sm">arrow_forward</span>
+      `;
+
+      feedbackBox.className = 'mt-space-sm p-space-sm rounded-lg bg-status-delivered-bg text-status-delivered block';
+      feedbackBox.innerHTML = `
+        <div class="flex items-center gap-space-xs">
+          <span class="material-symbols-outlined">verified</span>
+          <span class="font-label-md text-label-md">Sessão validada com sucesso!</span>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface mt-1">Redirecionando conforme permissões de nível do usuário (RF-04)...</p>
+      `;
+    }, 900);
+  }
+</script></main></body></html>
