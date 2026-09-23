@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SRCI — Relatórios e Auditoria</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/supabase-client.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/relatorios.js"></script>
+</head>
+<body>
+
+  <div class="app-layout">
+    <aside id="app-sidebar" class="app-sidebar"></aside>
+
+    <main class="app-main">
+      <header class="app-topbar">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <button class="mobile-menu-toggle" onclick="toggleSidebar()">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <h1 class="topbar-title">Relatórios de Auditoria &amp; Consumo</h1>
+        </div>
+        <button onclick="exportMovimentacoesCSV()" class="btn btn-secondary btn-sm">
+          <span class="material-symbols-outlined">download</span>
+          <span>Exportar CSV</span>
+        </button>
+      </header>
+
+      <div class="app-content">
+        <!-- Filtros de Período e Tipo de Movimentação -->
+        <div class="card" style="margin-bottom: 1.5rem;">
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;">
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
+              <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                <label for="filter-data-inicio" style="font-size: 0.75rem; font-weight: 600; color: var(--color-text-muted);">Data Início:</label>
+                <input type="date" id="filter-data-inicio" class="form-control" style="height: 32px; font-size: 0.8125rem;" onchange="loadMovimentacoesAuditoria()"/>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                <label for="filter-data-fim" style="font-size: 0.75rem; font-weight: 600; color: var(--color-text-muted);">Data Fim:</label>
+                <input type="date" id="filter-data-fim" class="form-control" style="height: 32px; font-size: 0.8125rem;" onchange="loadMovimentacoesAuditoria()"/>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                <label for="filter-tipo-mov" style="font-size: 0.75rem; font-weight: 600; color: var(--color-text-muted);">Tipo de Operação:</label>
+                <select id="filter-tipo-mov" class="form-control" style="height: 32px; font-size: 0.8125rem;" onchange="loadMovimentacoesAuditoria()">
+                  <option value="todos">Todas (Entradas &amp; Saídas)</option>
+                  <option value="entrada">Entrada (Compras)</option>
+                  <option value="saida">Saída (Entregas)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabela de Movimentações Imutáveis (Auditoria) -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Extrato de Auditoria (Tabela Imutável movimentacoes)</h2>
+            <span id="movs-count-badge" class="badge-status badge-aprovada">0 Registros</span>
+          </div>
+
+          <div id="movimentacoes-container">
+            <div class="empty-state">
+              <span class="material-symbols-outlined">sync</span>
+              <p>Carregando logs de auditoria...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabela de Consumo por Setor e Colaborador -->
+        <div class="card" style="margin-top: 1.5rem;">
+          <div class="card-header">
+            <h2 class="card-title">Relatório de Consumo por Colaborador (Prevenção a Desperdícios)</h2>
+          </div>
+
+          <div id="consumo-container">
+            <div class="empty-state">
+              <span class="material-symbols-outlined">sync</span>
+              <p>Gerando consolidação de consumo...</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('app-sidebar');
+      if (sidebar) sidebar.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

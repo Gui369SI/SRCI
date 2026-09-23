@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SRCI — Login Corporativo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/supabase-client.js"></script>
+  <script src="assets/js/auth.js"></script>
+
+  <style>
+    body {
+      background-color: var(--color-canvas);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1.5rem;
+    }
+    .login-card {
+      background-color: var(--color-card);
+      border: 1px solid var(--color-neutral-sand);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-modal);
+      width: 100%;
+      max-width: 440px;
+      overflow: hidden;
+    }
+    .login-header {
+      background-color: var(--color-primary);
+      color: #ffffff;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .login-header .material-symbols-outlined {
+      font-size: 40px;
+      color: var(--color-tertiary);
+      margin-bottom: 0.5rem;
+    }
+    .login-header h1 {
+      color: #ffffff;
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+    }
+    .login-header p {
+      font-size: 0.8125rem;
+      color: #c6c5d2;
+    }
+    .login-body {
+      padding: 1.75rem 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card">
+    <div class="login-header">
+      <span class="material-symbols-outlined">inventory_2</span>
+      <h1>SRCI — Controle de Insumos</h1>
+      <p>Acesso restrito para colaboradores e gestores</p>
+    </div>
+
+    <div class="login-body">
+      <div id="login-alert" class="alert-box alert-danger" style="display: none;"></div>
+      <div id="login-info" class="alert-box alert-info" style="display: none;"></div>
+
+      <form id="form-login" onsubmit="handleLoginSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="login-email">E-mail Corporativo</label>
+          <input type="email" id="login-email" class="form-control" placeholder="usuario@empresa.com.br" required />
+        </div>
+
+        <div class="form-group">
+          <div class="form-label">
+            <span>Senha de Acesso</span>
+            <a href="#" onclick="handleForgotPassword(event)" style="font-size: 0.75rem; color: var(--color-secondary); text-decoration: none;">Esqueci minha senha</a>
+          </div>
+          <input type="password" id="login-password" class="form-control" placeholder="••••••••••••" required />
+        </div>
+
+        <button type="submit" id="btn-login" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem; height: 42px;">
+          <span class="material-symbols-outlined">login</span>
+          <span>Entrar no Sistema</span>
+        </button>
+      </form>
+
+      <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-surface-subtle); text-align: center; font-size: 0.75rem; color: var(--color-text-muted);">
+        <p>Contas gerenciadas pela TI (RF-01).</p>
+        <p style="margin-top: 0.25rem; color: var(--color-outline);">Divisão de Tecnologia &amp; Governança SRCI</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Se o usuário já estiver autenticado, redireciona para a tela correspondente
+    document.addEventListener('DOMContentLoaded', async () => {
+      const user = await SRCI_AUTH.getUser();
+      if (user) {
+        const profile = await SRCI_AUTH.getProfile();
+        if (profile) {
+          SRCI_AUTH.redirectUserByRole(profile.perfil);
+        }
+      }
+    });
+
+    async function handleLoginSubmit(event) {
+      event.preventDefault();
+      const alertBox = document.getElementById('login-alert');
+      const infoBox = document.getElementById('login-info');
+      const btn = document.getElementById('btn-login');
+
+      alertBox.style.display = 'none';
+      infoBox.style.display = 'none';
+
+      const email = document.getElementById('login-email').value.trim();
+      const password = document.getElementById('login-password').value;
+
+      btn.disabled = true;
+      btn.innerHTML = `<span class="material-symbols-outlined" style="animation: spin 1s infinite linear;">sync</span> Autenticando...`;
+
+      try {
+        await SRCI_AUTH.login(email, password);
+        const profile = await SRCI_AUTH.getProfile();
+
+        infoBox.innerHTML = `<span>Login realizado com sucesso! Redirecionando...</span>`;
+        infoBox.style.display = 'flex';
+
+        setTimeout(() => {
+          if (profile && profile.perfil) {
+            SRCI_AUTH.redirectUserByRole(profile.perfil);
+          } else {
+            window.location.href = 'dashboard.html';
+          }
+        }, 500);
+
+      } catch (err) {
+        alertBox.textContent = err.message || "E-mail ou senha inválidos.";
+        alertBox.style.display = 'flex';
+        btn.disabled = false;
+        btn.innerHTML = `<span class="material-symbols-outlined">login</span> <span>Entrar no Sistema</span>`;
+      }
+    }
+
+    async function handleForgotPassword(event) {
+      event.preventDefault();
+      const email = document.getElementById('login-email').value.trim();
+      const alertBox = document.getElementById('login-alert');
+      const infoBox = document.getElementById('login-info');
+
+      alertBox.style.display = 'none';
+      infoBox.style.display = 'none';
+
+      if (!email) {
+        alertBox.textContent = "Por favor, preencha o campo de E-mail Corporativo acima para redefinir sua senha.";
+        alertBox.style.display = 'flex';
+        return;
+      }
+
+      try {
+        await SRCI_AUTH.resetPassword(email);
+        infoBox.textContent = "Link de redefinição de senha enviado para " + email + ". Verifique sua caixa de entrada.";
+        infoBox.style.display = 'flex';
+      } catch (err) {
+        alertBox.textContent = err.message || "Erro ao solicitar redefinição de senha.";
+        alertBox.style.display = 'flex';
+      }
+    }
+  </script>
+</body>
+</html>
